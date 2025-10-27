@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+nav a:hover {
+  color: #0077b6;
+}
+
+/* Hero */
+.hero {
+  background: url('https://source.unsplash.com/1600x900/?travel,landscape') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.hero-content {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+.btn {
+  background: #0077b6;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #023e8a;
+}
+
+/* Sections */
+.about, .destinations, .stories, .contact {
+  padding: 100px 60px;
+  text-align: center;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+/* Grid sections */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+.card, .story {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.card:hover, .story:hover {
+  transform: translateY(-5px);
+}
+.card img, .story img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background: #1c1c1c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+Click Commit changes ✅
+
+📄 3️⃣ File 3: sitemap.xml
+File name:
+
+pgsql
+Copy code
+sitemap.xml
+Paste:
+
+xml
+Copy code
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yourusername.github.io/safarverse/</loc>
+    <lastmod>2025-10-28</lastmod>
+    <priority>1.00</priority>
+  </url>
+</urlset>
