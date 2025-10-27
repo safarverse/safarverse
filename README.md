@@ -1,4 +1,4 @@
-## Hi there 👋
+## We Plan the best travel experience for you.
 
 <!--
 **safarverse/safarverse** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
