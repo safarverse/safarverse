@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | SafarVerse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">SafarVerse</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="trips.html">Trips</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" style="padding-top:100px;">
+    <h2>About SafarVerse</h2>
+    <p>At Safarverse, we turn affordable trips into extraordinary memories you’ll never forget.</p>
+    <p>Our team of explorers carefully curates experiences and hidden gems across the world to bring you authentic travel inspiration.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 SafarVerse. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
