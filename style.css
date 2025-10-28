@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 3em;
 }
 
 .logo {
@@ -32,6 +33,7 @@ body {
   padding: 0;
   margin: 0;
   gap: 2em;
+  width: auto;
 }
 
 .nav-links li {
