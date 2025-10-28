@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafarVerse | Trips</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar (same as before) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">SafarVerse</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Trips Hero Section -->
+  <section class="trips-hero">
+    <img src="images" alt="Kerala Trip">
+    <div class="trips-title">
+      <h1>Kerala Trip</h1>
+    </div>
+  </section>
+
+  <!-- Itinerary Section -->
+  <section class="itinerary">
+    <h2>10-Day Kerala Itinerary</h2>
+
+    <!-- Day 1 -->
+    <div class="day">
+      <div class="day-text left">
+        <h3>Day 1: Arrival in Kochi</h3>
+        <p>Explore Fort Kochi, visit Chinese fishing nets, and enjoy local cuisine.</p>
+      </div>
+      <div class="day-img right">
+        <img src="images/Travel1" alt="Kochi">
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day">
+      <div class="day-img left">
+        <img src="images/Travel2" alt="Munnar">
+      </div>
+      <div class="day-text right">
+        <h3>Day 2: Munnar</h3>
+        <p>Visit tea plantations, Eravikulam National Park, and enjoy hill station views.</p>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day">
+      <div class="day-text left">
+        <h3>Day 3: Alleppey Backwaters</h3>
+        <p>Houseboat ride through serene backwaters, enjoy Kerala cuisine onboard.</p>
+      </div>
+      <div class="day-img right">
+        <img src="images/Travel3" alt="Alleppey">
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day">
+      <div class="day-img left">
+        <img src="images/Travel4" alt="Thekkady">
+      </div>
+      <div class="day-text right">
+        <h3>Day 4: Thekkady</h3>
+        <p>Periyar Wildlife Sanctuary, bamboo rafting, spice plantations visit.</p>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day">
+      <div class="day-text left">
+        <h3>Day 5: Kumarakom</h3>
+        <p>Relax by the backwaters, bird sanctuary visit, and sunset cruise.</p>
+      </div>
+      <div class="day-img right">
+        <img src="images/Travel5" alt="Kumarakom">
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day">
+      <div class="day-img left">
+        <img src="images/Travel6" alt="Kovalam">
+      </div>
+      <div class="day-text right">
+        <h3>Day 6: Kovalam</h3>
+        <p>Relax at beaches, lighthouse visit, enjoy Kerala spa therapy.</p>
+      </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="day">
+      <div class="day-text left">
+        <h3>Day 7: Varkala</h3>
+        <p>Cliffside beach, yoga sessions, and sunset watching at Papanasam beach.</p>
+      </div>
+      <div class="day-img right">
+        <img src="images/Travel7" alt="Varkala">
+      </div>
+    </div>
+
+    <!-- Day 8 -->
+    <div class="day">
+      <div class="day-img left">
+        <img src="images/Travel8" alt="Kovalam">
+      </div>
+      <div class="day-text right">
+        <h3>Day 8: Houseboat Experience</h3>
+        <p>Another day in Kerala backwaters to relax and enjoy local cuisine.</p>
+      </div>
+    </div>
+
+    <!-- Day 9 -->
+    <div class="day">
+      <div class="day-text left">
+        <h3>Day 9: Cultural Tour</h3>
+        <p>Attend Kathakali performance, visit local temples, and markets.</p>
+      </div>
+      <div class="day-img right">
+        <img src="images/Travel9" alt="Kerala Culture">
+      </div>
+    </div>
+
+    <!-- Day 10 -->
+    <div class="day">
+      <div class="day-img left">
+        <img src="images/Travel10" alt="Kochi Departure">
+      </div>
+      <div class="day-text right">
+        <h3>Day 10: Departure</h3>
+        <p>Return from Kochi airport, farewell Kerala!</p>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
