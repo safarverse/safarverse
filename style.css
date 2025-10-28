@@ -20,8 +20,9 @@ body {
 .logo {
   height: 150px;         
   width: auto;          
-  object-fit: contain;   
-  margin-right: 20px;    
+  object-fit: contain;
+  margin-left: 2em;
+  margin-right: 2em;    
   border: none;         
   background: none;      
 }
