@@ -25,12 +25,11 @@ body {
 
 .nav-links {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
   justify-content: center;
   align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links li {
@@ -72,7 +71,8 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%)
   top: 2.3em;
   background: #fff;
   min-width: 160px;
