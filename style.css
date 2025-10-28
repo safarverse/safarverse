@@ -4,7 +4,58 @@
   padding: 0;
   box-sizing: border-box;
 }
+.trips-hero {
+  position: relative;
+  text-align: center;
+}
 
+.trips-hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.trips-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.itinerary {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.day-text, .day-img {
+  flex: 1 1 45%;
+  padding: 10px;
+}
+
+.day-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Alternate left/right layout */
+.day:nth-child(even) .day-text {
+  order: 2;
+}
+
+.day:nth-child(even) .day-img {
+  order: 1;
+}
 /* Body */
 body {
   font-family: 'Poppins', sans-serif;
