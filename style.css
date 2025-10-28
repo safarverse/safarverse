@@ -18,10 +18,8 @@ body {
 }
 
 .logo {
-  color: #fff;
-  font-size: 1.5em;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  background-color: #FFDAB9; 
+  border-radius: 10px;
   margin-right: 0;
 }
 
