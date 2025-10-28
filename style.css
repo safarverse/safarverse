@@ -1,6 +1,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f8f8f8;
+  background-image: url('images/travel9.jpg');background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   color: #222;
 }
