@@ -1,6 +1,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('images/travel9.jpg');background-size: cover;
+  background-image: url('images/travel9.jpg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
@@ -23,11 +24,13 @@ body {
 }
 
 .nav-links {
-  display: inline-flex;
+  display: flex;
   list-style: none;
   margin: 0;
-  vertical-align: middle;
   padding: 0;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links li {
@@ -37,12 +40,15 @@ body {
 
 .nav-links a {
   color: #fff;
-  text-decoration: none;
   font-size: 1.1em;
   font-weight: 600;
   padding: 0.5em 1em;
+  text-decoration: none;
   border-radius: 3px;
   transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
 }
 
 .nav-links a:hover,
@@ -50,20 +56,19 @@ body {
   background: #ff6b6b;
   color: #fff;
 }
+
+/* Dropdown button */
 .dropbtn {
-  color: #fff;               /* same white color as links */
-  cursor: pointer;           /* pointer cursor on hover */
-  font-weight: 600;          /* consistent font weight */
-  font-size: 1.1em;          /* consistent font size */
-  padding: 0.5em 1em;        /* spacing similar to nav links */
-  display: inline-block;     /* inline block for layout */
-  user-select: none;         /* prevent text selection */
-}
-.dropdown .dropbtn::after {
-  content: " ▼";
-  font-size: 0.8em;
+  position: relative;
 }
 
+.dropbtn::after {
+  content: " ▼";
+  font-size: 0.8em;
+  margin-left: 4px;
+}
+
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -76,6 +81,7 @@ body {
   z-index: 10;
 }
 
+/* Dropdown links */
 .dropdown-content a {
   color: #222;
   padding: 12px 16px;
@@ -89,65 +95,7 @@ body {
   color: #111;
 }
 
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-/* Hero and Cards */
-.trips-hero {
-  text-align: center;
-  background: #eef2f3;
-  padding: 2em 0 1em 0;
-}
-
-.banner-img {
-  width: 90%;
-  max-width: 600px;
-  margin-bottom: 1em;
-  border-radius: 12px;
-}
-
-.trips-title h1 {
-  font-size: 2.1em;
-  margin: 0.3em 0 0.2em 0;
-}
-
-.trip-list {
-  padding: 2em 0;
-  text-align: center;
-}
-
-.trip-cards {
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  flex-wrap: wrap;
-  margin-top: 2em;
-}
-
-.trip-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
-  padding: 1.2em;
-  width: 220px;
-  text-align: center;
-}
-
-.trip-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 0.7em;
-}
-
-.trip-card h3 {
-  margin-bottom: 0.3em;
-  margin-top: 0.2em;
-  font-size: 1.2em;
-}
-
-.trip-card p {
-  font-size: 0.98em;
 }
