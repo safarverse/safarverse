@@ -9,7 +9,7 @@ body {
 }
 
 .navbar {
-  background: #FFDAB9;
+  background: transparent;
   padding: 1em 0;
   display: flex;
   align-items: center;
