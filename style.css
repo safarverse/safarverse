@@ -72,7 +72,7 @@ body {
   display: none;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
   top: 2.3em;
   background: #fff;
   min-width: 160px;
