@@ -10,18 +10,16 @@ body {
 
 .navbar {
   background: transparent;
-  padding: 1em 0;
+  padding: 1em 5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3em;
 }
 
 .logo {
   height: 150px;         
   width: auto;          
-  object-fit: contain;
-  margin-right: 80px;    
+  object-fit: contain;    
   border: none;         
   background: none;      
 }
