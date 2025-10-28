@@ -17,11 +17,11 @@ body {
 }
 
 .logo {
-  display: inline-block;
   color: #fff;
   font-size: 1.5em;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
-  margin-right: 2em;
+  margin-right: 2em; /* spacing between logo and nav links */
   vertical-align: middle;
 }
 
