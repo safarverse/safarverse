@@ -48,7 +48,15 @@ body {
   background: #ff6b6b;
   color: #fff;
 }
-
+.dropbtn {
+  color: #fff;               /* same white color as links */
+  cursor: pointer;           /* pointer cursor on hover */
+  font-weight: 600;          /* consistent font weight */
+  font-size: 1.1em;          /* consistent font size */
+  padding: 0.5em 1em;        /* spacing similar to nav links */
+  display: inline-block;     /* inline block for layout */
+  user-select: none;         /* prevent text selection */
+}
 .dropdown .dropbtn::after {
   content: " ▼";
   font-size: 0.8em;
