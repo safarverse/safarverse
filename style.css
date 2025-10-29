@@ -17,7 +17,7 @@ body {
 }
 
 .logo {
-  height: 150px;          /* increased logo size */
+  height: 180px;          /* increased logo size */
   width: auto;
   object-fit: contain;
   margin-right: 50px;    /* bigger gap between logo and Home */
