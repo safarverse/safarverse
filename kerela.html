@@ -3,146 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafarVerse | Trips</title>
+  <title>Kerala Trip | Safarverse</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar (same as before) -->
   <header>
     <nav class="navbar">
-      <div class="logo">SafarVerse</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="trips.html">Trips</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+   <img src="images/Logo1.png" alt="SafarVerse logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0);" class="dropbtn">Trips</a>
+        <div class="dropdown-content">
+        <a href="kerala.html">Kerala</a>
+        <a href="kashmir.html">Kashmir</a>
+        <a href="meghalaya.html">Meghalaya</a>
+        </div>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
   </header>
 
-  <!-- Trips Hero Section -->
-  <section class="trips-hero">
-    <img src="images" alt="Kerala Trip">
-    <div class="trips-title">
-      <h1>Kerala Trip</h1>
+  <main>
+  <h1>Kerala Trip Itinerary</h1>
+
+  <!-- Day 1 -->
+  <section class="day">
+    <div class="text">
+      <h2>Day 1: Arrival in Kochi</h2>
+      <p>Explore Fort Kochi, Chinese fishing nets, and local cafes.</p>
+    </div>
+    <div class="image">
+      <img src="images/Trave1.jpg" alt="Kochi" />
     </div>
   </section>
 
-  <!-- Itinerary Section -->
-  <section class="itinerary">
-    <h2>10-Day Kerala Itinerary</h2>
-
-    <!-- Day 1 -->
-    <div class="day">
-      <div class="day-text left">
-        <h3>Day 1: Arrival in Kochi</h3>
-        <p>Explore Fort Kochi, visit Chinese fishing nets, and enjoy local cuisine.</p>
-      </div>
-      <div class="day-img right">
-        <img src="images/Travel1.jpg" alt="Kochi">
-      </div>
+  <!-- Day 2 -->
+  <section class="day day-reverse">
+    <div class="text">
+      <h2>Day 2: Munnar</h2>
+      <p>Visit tea plantations, Anamudi peak, and Mattupetty Dam.</p>
     </div>
-
-    <!-- Day 2 -->
-    <div class="day">
-      <div class="day-img left">
-        <img src="images/Travel2.jpg" alt="Munnar">
-      </div>
-      <div class="day-text right">
-        <h3>Day 2: Munnar</h3>
-        <p>Visit tea plantations, Eravikulam National Park, and enjoy hill station views.</p>
-      </div>
+    <div class="image">
+      <img src="images/Travel2.jpg" alt="Munnar" />
     </div>
-
-    <!-- Day 3 -->
-    <div class="day">
-      <div class="day-text left">
-        <h3>Day 3: Alleppey Backwaters</h3>
-        <p>Houseboat ride through serene backwaters, enjoy Kerala cuisine onboard.</p>
-      </div>
-      <div class="day-img right">
-        <img src="images/Travel3..jpg" alt="Alleppey">
-      </div>
-    </div>
-
-    <!-- Day 4 -->
-    <div class="day">
-      <div class="day-img left">
-        <img src="images/Travel4.jpg" alt="Thekkady">
-      </div>
-      <div class="day-text right">
-        <h3>Day 4: Thekkady</h3>
-        <p>Periyar Wildlife Sanctuary, bamboo rafting, spice plantations visit.</p>
-      </div>
-    </div>
-
-    <!-- Day 5 -->
-    <div class="day">
-      <div class="day-text left">
-        <h3>Day 5: Kumarakom</h3>
-        <p>Relax by the backwaters, bird sanctuary visit, and sunset cruise.</p>
-      </div>
-      <div class="day-img right">
-        <img src="images/Travel5.jpg" alt="Kumarakom">
-      </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="day">
-      <div class="day-img left">
-        <img src="images/Travel6.jpg" alt="Kovalam">
-      </div>
-      <div class="day-text right">
-        <h3>Day 6: Kovalam</h3>
-        <p>Relax at beaches, lighthouse visit, enjoy Kerala spa therapy.</p>
-      </div>
-    </div>
-
-    <!-- Day 7 -->
-    <div class="day">
-      <div class="day-text left">
-        <h3>Day 7: Varkala</h3>
-        <p>Cliffside beach, yoga sessions, and sunset watching at Papanasam beach.</p>
-      </div>
-      <div class="day-img right">
-        <img src="images/Travel7.jpg" alt="Varkala">
-      </div>
-    </div>
-
-    <!-- Day 8 -->
-    <div class="day">
-      <div class="day-img left">
-        <img src="images/Travel8.jpg" alt="Kovalam">
-      </div>
-      <div class="day-text right">
-        <h3>Day 8: Houseboat Experience</h3>
-        <p>Another day in Kerala backwaters to relax and enjoy local cuisine.</p>
-      </div>
-    </div>
-
-    <!-- Day 9 -->
-    <div class="day">
-      <div class="day-text left">
-        <h3>Day 9: Cultural Tour</h3>
-        <p>Attend Kathakali performance, visit local temples, and markets.</p>
-      </div>
-      <div class="day-img right">
-        <img src="images/Travel9.jpg" alt="Kerala Culture">
-      </div>
-    </div>
-
-    <!-- Day 10 -->
-    <div class="day">
-      <div class="day-img left">
-        <img src="images/Travel10.jpg" alt="Kochi Departure">
-      </div>
-      <div class="day-text right">
-        <h3>Day 10: Departure</h3>
-        <p>Return from Kochi airport, farewell Kerala!</p>
-      </div>
-    </div>
-
   </section>
 
-</body>
-</html>
+  <!-- Day 3 -->
+  <section class="day">
+    <div class="text">
+      <h2>Day 3: Alleppey Backwaters</h2>
+      <p>Enjoy houseboat stay and Kerala cuisine.</p>
+    </div>
+    <div class="image">
+      <img src="images/Travel3.jpg" alt="Alleppey Backwaters" />
+    </div>
+  </section>
+
+  <!-- Day 4 -->
+  <section class="day day-reverse">
+    <div class="text">
+      <h2>Day 4: Kumarakom</h2>
+      <p>Relax at Kumarakom bird sanctuary and enjoy backwater views.</p>
+    </div>
+    <div class="image">
+      <img src="images/Travel4.jpg" alt="Kumarakom" />
+    </div>
+  </section>
+
+  <!-- Day 5 -->
+  <section class="day">
+    <div class="text">
+      <h2>Day 5: Thekkady</h2>
+      <p>Visit Periyar Wildlife Sanctuary and spice plantations.</p>
+    </div>
+    <div class="image">
+      <img src="images/Travel5.jpg" alt="Thekkady" />
+    </div>
+  </section>
+
+  <!-- Day 6 -->
+  <section class="day day-reverse">
+    <div class="text">
+      <h2>Day 6: Vagamon</h2>
+      <p>Enjoy rolling hills, tea gardens, and trekking opportunities.</p>
+    </div>
+    <div class="image">
+      <img src="images/Travel6.jpg" alt="Vagamon" />
+    </div>
+  </section>
+
+  <!-- Day 7 -->
+  <section class="day">
+    <div class="text">
+      <h2>Day 7: Wayanad</h2>
+      <p>Visit waterfalls, caves, and spice plantations in Wayanad.</p>
+    </div>
+    <div class="image">
+      <img src="images/Travel7.jpg" alt="Wayanad" />
+    </div>
+  </section>
+
+  <!-- Day 8 -->
+  <section class="day day-reverse">
+    <div class="text">
+      <h2>Day 8: Kovalam Beach</h2>
+      <p>Relax on golden sands, try local seafood, and enjoy sunset views.</p>
+    </div>
+    <div class="image">
+      <img src="images/Travel8.jpg" alt="Kovalam Beach" />
+    </div>
+  </section>
+
+  <!-- Day 9 -->
+  <section class="day">
+    <div class="text">
+      <h2>Day 9: Departure from Trivandrum</h2>
+      <p>Visit local markets or temples before departing Kerala.</p>
+    </div>
+    <div class="image">
+      <img src="images/Travel9.jpg" alt="Trivandrum" />
+    </div>
+  </section>
+</main>
