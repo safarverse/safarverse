@@ -110,8 +110,9 @@ body {
 .day {
   display: flex;
   width: 100%;
-  margin: 2em 0;
-  height: 300px;  /* adjust height as needed */
+  /*margin: 2em 0; */
+  height: auto;  /* adjust height as needed */
+  align-items: stretch;
   gap: 0;
 }
 
