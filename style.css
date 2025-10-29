@@ -4,6 +4,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background attachment: scroll;
   height: 100vh;
   margin: 0;
   color: #222;
@@ -166,13 +167,6 @@ body {
   html, body {
     width: 100%;
     overflow-x: hidden;
-  }
-
-  body {
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    min-height: 100vh;
   }
 
   /* show hamburger on mobile */
