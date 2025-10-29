@@ -17,10 +17,10 @@ body {
 }
 
 .logo {
-  height: 100px;         /* adjust size as needed */
+  height: 120px;         /* adjust size as needed */
   width: auto;
   object-fit: contain;
-  margin-right: 4em; 
+  margin-right: 8em; 
    
 }
 
