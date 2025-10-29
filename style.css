@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative
   width: 100%;
 }
 .navbar {
@@ -20,12 +21,14 @@ body {
 }
 
 .logo {
+  position: absolute
+  left: 5%
   height: 150px;         
   width: auto;          
   object-fit: contain;    
   border: none;         
   background: none;
-  margin-right: 12em;
+  margin: 0;
 }
 
 .nav-links {
@@ -34,9 +37,9 @@ body {
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   gap: 1em;
-  width: auto;
+  width: fit-content;
 }
 
 .nav-links li {
