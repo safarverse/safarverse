@@ -106,35 +106,51 @@ body {
   display: block;
 }
 
-/* ========== Itinerary zig-zag layout ========== */
+/* ========== Itinerary rectangle layout ========== */
 .day {
   display: flex;
-  align-items: center;
-  gap: 2em;
+  width: 100%;
   margin: 2em 0;
+  height: 300px;  /* adjust height as needed */
+  gap: 0;
 }
 
-.day .image img {
-  width: 400px;  /* adjust as needed */
-  height: auto;
-  border-radius: 10px;
+.text-box {
+  flex: 1;  /* half width */
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent */
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-/* Swap positions for alternating days */
-.day-reverse {
+.image-box {
+  flex: 1;  /* half width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.day.day-reverse {
   flex-direction: row-reverse;
 }
 
-/* Responsive for mobile */
 @media (max-width: 768px) {
-  .day, .day-reverse {
+  .day, .day.day-reverse {
     flex-direction: column;
-    text-align: center;
+    height: auto;
   }
 
-  .day .image img, .day-reverse .image img {
+  .image-box img {
     width: 100%;
-    max-width: 300px;
+    height: auto;
   }
 }
-
