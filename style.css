@@ -13,14 +13,21 @@ body {
   padding: 1em 5em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
+}
+:root {
+  --logo-gap: 100px; /* space between logo and Home, adjust as needed */
 }
 
 .logo {
-  height:65px;  
-  width: auto;          
-  object-fit: contain;    
+  height: 80px;  /* slightly larger logo */
+  width: auto;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - var(--logo-gap));
+  transform: translate(-100%, -50%);   
 }
 
 .nav-links {
