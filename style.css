@@ -13,34 +13,24 @@ body {
   padding: 1em 5em;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
-}
-:root {
-  --logo-gap: 100px; /* space between logo and Home, adjust as needed */
+  justify-content: Center;
 }
 
 .logo {
-  height: 80px;  /* slightly larger logo */
+  height: 75px;         /* adjust size as needed */
   width: auto;
   object-fit: contain;
-  position: absolute;
-  top: 50%;
-  left: calc(50% - var(--logo-gap));
-  transform: translate(-100%, -50%);   
+  margin-right: 4em; 
+   
 }
 
 .nav-links {
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 2em; /* spacing between normal links */
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 0 auto;
-  gap: 2em;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .nav-links li {
