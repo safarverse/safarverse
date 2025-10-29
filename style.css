@@ -20,7 +20,7 @@ body {
   height: 130px;          /* increased logo size */
   width: auto;
   object-fit: contain;
-  margin-right: 120px;    /* bigger gap between logo and Home */
+  margin-right: 80px;    /* bigger gap between logo and Home */
   z-index: 2;
  
    
