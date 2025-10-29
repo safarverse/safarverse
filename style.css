@@ -147,17 +147,9 @@ body {
 /* === MOBILE SCREEN FIX === */
 @media (max-width: 768px) {
   body {
-    background: none;              /* remove full-screen background */
-    min-height: auto;
-  }
-
-  .hero-image {
-    background-image: url('images/homepage.jpg');
-    background-size: contain;       /* fit image naturally */
+    background-size: contain;       /* shows full image without cropping */
+    background-position: top;       /* align image to top */
     background-repeat: no-repeat;
-    background-position: top center;
-    width: 100%;
-    height: 200px;                 /* adjust height for rectangle */
-    margin-bottom: 1em;            /* space below image */
+    height: auto;                   /* let page height grow naturally */
   }
 }
