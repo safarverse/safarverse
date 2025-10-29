@@ -10,24 +10,29 @@ body {
 
 .navbar {
   background: transparent;
-  padding: 1em 5em;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: Center;
+  padding: 1em 5em;
 }
 
 .logo {
-  height: 120px;         /* adjust size as needed */
+  height: 130px;          /* increased logo size */
   width: auto;
   object-fit: contain;
-  margin-right: 4em; 
+  margin-right: 120px;    /* bigger gap between logo and Home */
+  z-index: 2;
+ 
    
 }
 
 .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 2em; /* spacing between normal links */
+  gap: 2em;
   list-style: none;
   margin: 0;
   padding: 0;
