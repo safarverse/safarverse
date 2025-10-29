@@ -145,13 +145,19 @@ body {
   flex-direction: row-reverse;
 }
 
+/* === MOBILE SCREEN FIX (for background fit only) === */
 @media (max-width: 768px) {
-  body {
-    background-size: cover;
-    background-position: center;
-    overflow-x: hidden; /* prevents side scrolling */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
   }
 
+  body {
+    background-size: cover;          /* ensures image fits mobile width */
+    background-position: center;     /* centers image nicely */
+    background-attachment: fixed;    /* prevents scrolling distortion */
+  }
+}
   .image-box img {
     width: 100%;
     height: auto;
