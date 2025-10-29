@@ -149,6 +149,7 @@ body {
   body {
     background-size: cover;
     background-position: center;
+    overflow-x: hidden; /* prevents side scrolling */
   }
 
   .image-box img {
