@@ -18,10 +18,10 @@ body {
 }
 
 .logo {
-  height: 180px;          /* increased logo size */
+  height: 100px;          /* increased logo size */
   width: auto;
   object-fit: contain;
-  margin-right: 50px;    /* bigger gap between logo and Home */
+  margin-right: 30px;    /* bigger gap between logo and Home */
   z-index: 2;
  
    
