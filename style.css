@@ -7,13 +7,16 @@ body {
   margin: 0;
   color: #222;
 }
-
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .navbar {
   background: transparent;
   padding: 1em 5em;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .logo {
@@ -21,7 +24,8 @@ body {
   width: auto;          
   object-fit: contain;    
   border: none;         
-  background: none;      
+  background: none;
+  margin-right: 4em;
 }
 
 .nav-links {
