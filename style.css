@@ -145,11 +145,11 @@ body {
   flex-direction: row-reverse;
 }
 /* === MOBILE SCREEN FIX === */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   body {
-    background-size: contain;       /* shows full image without cropping */
-    background-position: top;       /* align image to top */
+    background-size: contain;    /* Show the whole image, don't zoom */
+    background-position: center;
     background-repeat: no-repeat;
-    height: auto;                   /* let page height grow naturally */
+    background-color: #222;      /* Set your site's background color here, shown if there are gaps */
   }
 }
