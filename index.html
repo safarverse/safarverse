@@ -48,6 +48,15 @@
     <h1></h1>
   </main>
   <script>
+  function setVh() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh * 100}px`);
+  }
+  window.addEventListener('resize', setVh);
+  window.addEventListener('load', setVh);
+</script>
+
+  <script>
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('nav-links');
 
