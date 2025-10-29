@@ -14,17 +14,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  gap: 2em;
 }
 
 .logo {
-  position: absolute;
   left: 3%
-  height: 50px;  
+  height:45px;  
   width: auto;          
   object-fit: contain;    
-  margin-right: 2.5em;
-  cursor: pointer;
+  margin-right: 3em;
 }
 
 .nav-links {
