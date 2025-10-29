@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  
 }
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,7 +10,9 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  height: 100vh;
   min-height: 100vh;
+  width: 100%
   color: #222;
 }
 
@@ -155,7 +157,7 @@ body {
     background-size: cover;        /* ensures the image covers the screen */
     background-position: center;   /* centers the image nicely */
     background-attachment: scroll; /* prevents distortion on scroll */
-    min-height: -webkit-fill-available; /* fills mobile viewport properly */
+    height: var(--vh,100vh); /* fills mobile viewport properly */
     width: 100%;
   }
 }
