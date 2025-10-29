@@ -22,15 +22,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Hero image for mobile -->
+  <div class="hero-image"></div>
+  
   <header>
   <nav class="navbar">
-   <img src="images/Logo1.png" alt="SafarVerse logo" class="logo">
-    
-    <!-- HAMBURGER BUTTON (keep this) -->
-  <button class="hamburger" id="menuToggle" aria-label="Open menu">☰</button>
-
-    
-    <ul class="nav-links" id="menu toggle";
+   <img src="images/Logo1.png" alt="SafarVerse logo" class="logo">  
+    <ul class="nav-links"
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
         <a href="javascript:void(0);" class="dropbtn">Trips</a>
@@ -47,22 +45,5 @@
 <main>
     <h1></h1>
   </main>
-  <script>
-  function setVh() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh * 100}px`);
-  }
-  window.addEventListener('resize', setVh);
-  window.addEventListener('load', setVh);
-</script>
-
-  <script>
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
 </body>
 </html>
