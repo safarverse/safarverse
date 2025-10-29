@@ -7,30 +7,24 @@ body {
   margin: 0;
   color: #222;
 }
-.navbar-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
+
 .navbar {
   background: transparent;
   padding: 1em 5em;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .logo {
-  position: absolute
-  left: 5%
-  height: 48px;  
-  max-width 140px;
+  position: absolute;
+  left: 3%
+  height: 50px;  
   width: auto;          
   object-fit: contain;    
-  border: none;         
-  background: none;
-  margin-right: 3em;
-  position:static;
+  margin-right: 2.5em;
+  cursor: pointer;
 }
 
 .nav-links {
