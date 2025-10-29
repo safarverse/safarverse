@@ -145,7 +145,7 @@ body {
   flex-direction: row-reverse;
 }
 
-/* === MOBILE SCREEN FIX (for background fit only) === */
+/* === MOBILE SCREEN FIX & NAVBAR === */
 @media (max-width: 768px) {
   html, body {
     width: 100%;
@@ -153,13 +153,47 @@ body {
   }
 
   body {
-    background-size: cover;          /* ensures image fits mobile width */
-    background-position: center;     /* centers image nicely */
-    background-attachment: fixed;    /* prevents scrolling distortion */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
-}
-  .image-box img {
-    width: 100%;
-    height: auto;
+
+  /* Hide the normal nav links */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    padding: 1em 0;
+    border-radius: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 40px;
+  }
+
+  /* Hide hamburger on desktop */
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .logo {
+    height: 100px;
+    margin-right: auto;
   }
 }
