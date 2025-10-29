@@ -18,10 +18,10 @@ body {
 }
 
 .logo {
-  height:45px;  
+  height:70px;  
   width: auto;          
   object-fit: contain;    
-  margin-right: 3em;
+  margin-right: 5em;
 }
 
 .nav-links {
