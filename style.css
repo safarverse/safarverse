@@ -105,3 +105,36 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* ========== Itinerary zig-zag layout ========== */
+.day {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.day .image img {
+  width: 400px;  /* adjust as needed */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Swap positions for alternating days */
+.day-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .day, .day-reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .day .image img, .day-reverse .image img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
