@@ -254,84 +254,87 @@ body {
 }
 /* ========== MOBILE RESPONSIVE ========== */
 
-/* Tablet and smaller screens */
 @media (max-width: 768px) {
   
+  /* Fix navbar overflow */
   .navbar {
-    flex-direction: column;
-    padding: 1em 2em;
-    align-items: center;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 0.8em 1em !important;
+    align-items: center !important;
   }
   
+  /* Logo on left, smaller */
   .logo {
-    height: 80px; /* Smaller logo on mobile */
-    margin-left: 0;
-    margin-bottom: 1em;
+    height: 50px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: relative !important;
   }
   
+  /* Hide nav links on mobile - we'll add hamburger menu later */
   .nav-links {
-    position: static; /* Remove absolute positioning */
-    transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    margin-left: 0;
+    display: none !important;
   }
   
-  .nav-links a {
-    font-size: 0.9em;
-    padding: 0.4em 0.8em;
+  /* Hero section - prevent image cropping */
+  .hero-section {
+    height: 100vh !important;
+    background-size: cover !important;
+    background-position: center center !important;
   }
   
-  /* Hero section heading */
+  /* Heading - smaller and responsive */
   .hero-section h1 {
-    font-size: 2rem; /* Smaller heading on mobile */
-    padding: 0 15px;
-    max-width: 95%;
+    font-size: 1.8rem !important;
+    padding: 0 20px !important;
+    max-width: 90% !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
   }
   
   /* Packages section */
   .packages-section {
-    padding: 40px 0;
+    padding: 40px 10px !important;
   }
   
   .packages-section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem !important;
   }
   
   .packages-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 20px;
-    width: 95%;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 95% !important;
+  }
+  
+  .package-card {
+    margin: 0 auto;
+  }
+  
+  .package-card img {
+    height: 200px !important;
   }
 }
 
-/* Small mobile screens */
 @media (max-width: 480px) {
   
   .logo {
-    height: 60px;
-  }
-  
-  .nav-links {
-    gap: 0.5em;
-  }
-  
-  .nav-links a {
-    font-size: 0.85em;
-    padding: 0.3em 0.6em;
+    height: 40px !important;
   }
   
   .hero-section h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem !important;
+    padding: 0 15px !important;
   }
   
   .packages-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
   
-  .dropdown-content {
-    min-width: 140px;
+  .package-card img {
+    height: 180px !important;
   }
 }
+
 
