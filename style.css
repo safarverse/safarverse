@@ -220,5 +220,5 @@ body {
   background-image: url('images/homepage.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
