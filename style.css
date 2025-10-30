@@ -42,7 +42,7 @@ body {
   height: 120px;          /* increased logo size */
   width: auto;
   object-fit: contain;
-  margin-left: 200px;
+  margin-left: 150px;
   /*transform: translateX(150px);*/
   z-index: 2;
  
