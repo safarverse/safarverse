@@ -42,7 +42,7 @@ body {
   height: 120px;          /* increased logo size */
   width: auto;
   object-fit: contain;
-  margin-right: -30px;    /* bigger gap between logo and Home */
+  /*margin-right: -30px;    /* bigger gap between logo and Home */
   z-index: 2;
  
    
