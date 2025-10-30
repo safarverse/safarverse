@@ -166,15 +166,7 @@ body {
 .day.day-reverse {
   flex-direction: row-reverse;
 }
-/* === MOBILE SCREEN FIX === */
-@media (max-width: 600px) {
-  body {
-    /*background-size: contain;    
-    background-position: center;
-    background-repeat: no-repeat; */
-    background-color: #222;      /* Set your site's background color here, shown if there are gaps */
-  }
-}
+
 /* Our Tour Packages Section */
 .packages-section {
   padding: 60px 0;
@@ -260,3 +252,86 @@ body {
   z-index: 50; /* Ensures it's above the background but below navbar */
   max-width: 90%;
 }
+/* ========== MOBILE RESPONSIVE ========== */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  
+  .navbar {
+    flex-direction: column;
+    padding: 1em 2em;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 80px; /* Smaller logo on mobile */
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+  
+  .nav-links {
+    position: static; /* Remove absolute positioning */
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-left: 0;
+  }
+  
+  .nav-links a {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+  }
+  
+  /* Hero section heading */
+  .hero-section h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+    padding: 0 15px;
+    max-width: 95%;
+  }
+  
+  /* Packages section */
+  .packages-section {
+    padding: 40px 0;
+  }
+  
+  .packages-section h2 {
+    font-size: 2rem;
+  }
+  
+  .packages-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px;
+    width: 95%;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .nav-links {
+    gap: 0.5em;
+  }
+  
+  .nav-links a {
+    font-size: 0.85em;
+    padding: 0.3em 0.6em;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .packages-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .dropdown-content {
+    min-width: 140px;
+  }
+}
+
