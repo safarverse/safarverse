@@ -42,8 +42,8 @@ body {
   height: 120px;          /* increased logo size */
   width: auto;
   object-fit: contain;
-  /*margin-left: 100px;*/
-  transform: translateX(150px);
+  margin-left: 200px;
+  /*transform: translateX(150px);*/
   z-index: 2;
  
    
