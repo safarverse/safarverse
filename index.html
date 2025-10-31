@@ -48,3 +48,95 @@
   <!-- Trips Section -->
   <section id="trips" class="trips">
     <h2>Featured Trips</h2>
+    <div class="trip-cards">
+      <div class="trip-card">
+        <img src="https://source.unsplash.com/400x300/?beach,maldives" alt="Maldives">
+        <div class="trip-info">
+          <h3>Maldives Escape</h3>
+          <p>5 Days / 4 Nights | ₹25,999 per person</p>
+          <button class="book-btn" onclick="openBooking('Maldives Escape')">Book Now</button>
+        </div>
+      </div>
+      <div class="trip-card">
+        <img src="https://source.unsplash.com/400x300/?mountains,nepal" alt="Nepal Trek">
+        <div class="trip-info">
+          <h3>Nepal Himalayan Trek</h3>
+          <p>6 Days / 5 Nights | ₹18,499 per person</p>
+          <button class="book-btn" onclick="openBooking('Nepal Himalayan Trek')">Book Now</button>
+        </div>
+      </div>
+      <div class="trip-card">
+        <img src="https://source.unsplash.com/400x300/?city,paris" alt="Paris">
+        <div class="trip-info">
+          <h3>Paris City Lights</h3>
+          <p>4 Days / 3 Nights | ₹22,999 per person</p>
+          <button class="book-btn" onclick="openBooking('Paris City Lights')">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map" class="map-section">
+    <h2>Explore the World</h2>
+    <div class="map-placeholder">
+      <p>Interactive world map coming soon!</p>
+    </div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBooking()">&times;</span>
+      <h2>Book Your Trip</h2>
+      <form id="bookingForm">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="Enter your number" required>
+        <label>Trip</label>
+        <input type="text" id="tripName" name="trip" readonly>
+        <label>Number of Travellers</label>
+        <input type="number" name="people" min="1" placeholder="Enter number" required>
+        <button type="submit" class="btn">Submit Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 Voyagera | Adventures Made Premium</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const modal = document.getElementById("bookingModal");
+    const tripInput = document.getElementById("tripName");
+
+    function openBooking(trip) {
+      tripInput.value = trip;
+      modal.style.display = "block";
+    }
+
+    function closeBooking() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Thank you! Your booking for " + tripInput.value + " is received.");
+      closeBooking();
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
