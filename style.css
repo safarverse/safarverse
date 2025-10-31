@@ -252,6 +252,8 @@ body {
   z-index: 50; /* Ensures it's above the background but below navbar */
   max-width: 90%;
 }
+
+/* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
   
   /* Show hamburger on mobile */
@@ -259,22 +261,21 @@ body {
     display: flex !important;
   }
   
-  /* Hero section - KEEP FULL IMAGE VISIBLE (your current setting) */
+  /* Hero section - full screen with background image */
   .hero-section {
     position: relative !important;
     width: 100% !important;
-    min-height: 100vh !important;
-    height: auto !important;
-    background-size: contain !important; /* KEEPS YOUR CURRENT SETTING - full image */
-    background-position: center top !important;
+    height: 100vh !important;
+    background-size: cover !important;
+    background-position: center center !important;
     background-repeat: no-repeat !important;
-    background-color: #f5f5f5 !important;
+    display: block !important; /* Changed from flex */
   }
   
   /* Heading - CENTERED OVER THE IMAGE */
   .hero-section h1 {
     position: absolute !important;
-    top: 40% !important; /* Adjust this if text appears too high/low */
+    top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     font-size: 1.3rem !important;
@@ -282,25 +283,29 @@ body {
     max-width: 85% !important;
     line-height: 1.3 !important;
     text-align: center !important;
-    margin: 0 !important;
+    margin: 0 !important; /* Remove all margins */
+    margin-top: 0 !important; /* Force remove margin-top */
     color: white !important;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7) !important;
     z-index: 50 !important;
   }
   
-  /* Logo - BIGGER */
-  .logo {
-    height: 80px !important;
-    margin-left: 0 !important;
-  }
-  
-  /* Rest of the mobile menu CSS stays the same... */
+  /* Navbar */
   .navbar {
     flex-direction: row !important;
     justify-content: space-between !important;
     padding: 0.8em 1em !important;
+    align-items: center !important;
   }
   
+  /* Logo - bigger on mobile */
+  .logo {
+    height: 80px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Mobile menu */
   .nav-links {
     display: none !important;
     position: fixed !important;
@@ -319,8 +324,55 @@ body {
     gap: 1.5em !important;
   }
   
+  /* Active menu slides in */
   .nav-links.active {
     display: flex !important;
     right: 0 !important;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    font-size: 1.1em !important;
+    padding: 0.8em 1em !important;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Dropdown adjustments */
+  .dropdown-content {
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin-top: 10px !important;
+  }
+  
+  .dropdown-content a {
+    color: #fff !important;
+  }
+  
+  /* Packages section */
+  .packages-section {
+    padding: 40px 10px !important;
+  }
+  
+  .packages-grid {
+    grid-template-columns: 1fr !important;
+    width: 95% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.1rem !important;
+  }
+  
+  .logo {
+    height: 70px !important;
   }
 }
