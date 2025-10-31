@@ -19,6 +19,7 @@ body {
   width: auto;
   margin-right: 3px;  /* Space between logo and text */
   object-fit: contain;
+  padding: 5px 20px;
   margin-top: -10px;
 }
 
