@@ -24,12 +24,13 @@ body {
 
 /* Navbar */
 .navbar .container {
-  max-width: 1200px;   /* limits width of navbar */
+  max-width: 700px;   /* limits width of navbar */
   margin: 0 auto;      /* centers navbar */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;  /* reduced padding for compact look */
+  padding: 10px 15px;  
+  flex-wrap: nowrap;/* reduced padding for compact look */
 }
 
 .navbar {
