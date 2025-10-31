@@ -1,25 +1,8 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #faf7f2;
-  color: #3e3b33;
-  line-height: 1.6;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  font-family: 'Kalam', cursive;
-  font-size: 1.8rem;
-  color: #a66a2c;
-  font-weight: bold;
-}
-
-.logo-img {
-  height: 80px;        /* Adjust the size of your logo */
-  width: auto;
-  margin-right: 3px;  /* Space between logo and text */
-  object-fit: contain;
-  margin-top: -10px;
+  background: #faf7f2;
+  color: #333;
 }
 
 /* Navbar */
@@ -28,29 +11,43 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: #fff8f0;
-  border-bottom: 2px solid #e0c9a6;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.navbar .logo {
+.logo {
+  display: flex;
+  align-items: center;
   font-family: 'Kalam', cursive;
   font-size: 1.8rem;
-  color: #a66a2c;
-}
-.navbar nav a {
-  text-decoration: none;
-  color: #3e3b33;
-  margin-left: 25px;
-  font-weight: 500;
-}
-.navbar nav a:hover {
-  color: #a66a2c;
+  color: #0d9488;
+  font-weight: bold;
 }
 
-/* Hero Section */
+.logo-img {
+  height: 60px;
+  width: auto;
+  margin-right: 8px;
+  object-fit: contain;
+  margin-top: -5px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #0d9488;
+}
+
+/* Hero */
 .hero {
   position: relative;
   height: 90vh;
@@ -61,6 +58,7 @@ body {
   color: white;
   overflow: hidden;
 }
+
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -69,117 +67,205 @@ body {
   object-fit: cover;
   opacity: 0.7;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 650px;
-  padding: 20px;
+  max-width: 700px;
 }
+
 .hero h1 {
   font-family: 'Kalam', cursive;
   font-size: 3rem;
   margin-bottom: 15px;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
+
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #f3efe9;
 }
+
 .btn {
-  background-color: #a66a2c;
+  background-color: #0d9488;
   color: white;
   padding: 12px 28px;
-  border-radius: 25px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
+
 .btn:hover {
-  background-color: #8b5523;
+  background-color: #0f766e;
 }
 
-/* Journal Section */
-.journal {
+/* Trips */
+.trips {
   text-align: center;
   padding: 80px 20px;
-  background: #fff8f0;
 }
-.journal h2 {
+
+.trips h2 {
   font-family: 'Kalam', cursive;
   font-size: 2.5rem;
-  color: #a66a2c;
+  color: #0d9488;
   margin-bottom: 40px;
 }
-.entries {
+
+.trip-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-}
-.entry {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: 0.3s;
-}
-.entry:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-.entry img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.entry h3 {
-  font-family: 'Kalam', cursive;
-  color: #a66a2c;
-  margin: 15px;
-}
-.entry p {
-  color: #444;
-  margin: 0 15px 20px;
-}
-.read-btn {
-  display: inline-block;
-  margin: 0 15px 20px;
-  color: #a66a2c;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-.read-btn:hover {
-  text-decoration: underline;
+  justify-items: center;
 }
 
-/* Quote Section */
-.quote {
-  background: #f3ece4;
+.trip-card {
+  background: #f0fdfa;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.trip-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.trip-info {
+  padding: 15px;
+}
+
+.trip-info h3 {
+  color: #0d9488;
+  margin-bottom: 8px;
+}
+
+.trip-info p {
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.book-btn {
+  background: #fb923c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #f97316;
+}
+
+/* Booking Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 8% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h2 {
+  color: #0d9488;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-content .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Testimonials */
+.testimonials {
   padding: 80px 20px;
   text-align: center;
+  background: #e0f2f1;
+}
+
+.testimonials h2 {
   font-family: 'Kalam', cursive;
-  color: #6b4b2a;
+  font-size: 2.5rem;
+  color: #0d9488;
+  margin-bottom: 40px;
 }
-.quote blockquote {
-  font-size: 1.8rem;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
-.quote span {
-  display: block;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #8b5523;
+
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.testimonial-card h4 {
+  color: #0d9488;
+  font-weight: 600;
 }
 
 /* Footer */
 footer {
-  background: #3e3b33;
-  color: #f9f7f3;
   text-align: center;
   padding: 25px;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
+  background: #0d9488;
+  color: white;
 }
