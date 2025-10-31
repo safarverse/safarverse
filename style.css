@@ -238,19 +238,20 @@ body {
   
 }
 .hero-section h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centers both horizontally and vertically */
-  color: white; /* White text color */
-  font-size: 3rem; /* Adjust size as needed */
-  font-weight: 700;
-  text-align: center;
-  margin: 0;
-  padding: 0 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Optional: adds shadow for better readability */
-  z-index: 50; /* Ensures it's above the background but below navbar */
-  max-width: 90%;
+  position: absolute !important;
+  top: 35vh !important;
+    left: 50% !important;
+  transform: translateX(-50%) !important;
+    font-size: 1.5rem !important;
+    width: 85% !important;
+    max-width: 85% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    color: white !important;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9) !important;
+    z-index: 50 !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
 }
 @media (max-width: 768px) {
   
