@@ -1,130 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safarverse Globe Explorer</title>
+  <title>Safarverse | Adventure Journal</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Header -->
   <header class="navbar">
     <div class="logo">
       <img src="images/Safarverse.png" alt="Safarverse logo" class="logo-img">
-      Safarverse
-    </div>
+  Safarverse
+      </div>
     <nav>
       <a href="#">Home</a>
-      <a href="#trips">Trips</a>
-      <a href="#map">Map</a>
-      <a href="#contact">Contact</a>
+      <a href="#">Destinations</a>
+      <a href="#">Stories</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Forest adventure" class="hero-bg">
     <div class="hero-content">
-      <h1>Explore the World, One Adventure at a Time 🌍</h1>
-      <p>Discover curated trips across mountains, beaches, forests, and cities. Let your journey begin!</p>
-      <a href="#trips" class="btn">Book Your Adventure</a>
+      <h1>Write Your Next Chapter in the Wild</h1>
+      <p>Every trail tells a story. Let yours begin with Safarverse — where adventures turn into memories.</p>
+      <a href="#" class="btn">Start Exploring</a>
     </div>
   </section>
 
-  <!-- Map Section -->
-  <section id="map" class="map-section">
-    <h2>Choose Your Destination</h2>
-    <div class="map-placeholder">
-      <p>Interactive map coming soon!</p>
-    </div>
-  </section>
-
-  <!-- Trips Section -->
-  <section id="trips" class="trips">
-    <h2>Featured Trips</h2>
-    <div class="trip-cards">
-      <div class="trip-card">
-        <img src="https://source.unsplash.com/400x300/?beach,maldives" alt="Maldives">
-        <div class="trip-info">
-          <h3>Maldives Escape</h3>
-          <p>5 Days / 4 Nights | ₹25,999 per person</p>
-          <button class="book-btn" onclick="openBooking('Maldives Escape')">Book Now</button>
-        </div>
+  <!-- Journal Section -->
+  <section class="journal">
+    <h2>Travel Diaries</h2>
+    <div class="entries">
+      <div class="entry">
+        <img src="https://source.unsplash.com/400x300/?mountains,travel" alt="Himalayas">
+        <h3>The Call of the Himalayas</h3>
+        <p>Trekking through the misty trails of Himachal, surrounded by pine trees and peace — a journey for the soul.</p>
+        <a href="#" class="read-btn">Read Story →</a>
       </div>
-      <div class="trip-card">
-        <img src="https://source.unsplash.com/400x300/?mountains,nepal" alt="Nepal Trek">
-        <div class="trip-info">
-          <h3>Nepal Himalayan Trek</h3>
-          <p>6 Days / 5 Nights | ₹18,499 per person</p>
-          <button class="book-btn" onclick="openBooking('Nepal Himalayan Trek')">Book Now</button>
-        </div>
+      <div class="entry">
+        <img src="https://source.unsplash.com/400x300/?beach,travel" alt="Goa">
+        <h3>Footprints in the Sand</h3>
+        <p>Golden sunsets, guitar tunes, and strangers who became family — Goa has its own rhythm.</p>
+        <a href="#" class="read-btn">Read Story →</a>
       </div>
-      <div class="trip-card">
-        <img src="https://source.unsplash.com/400x300/?city,paris" alt="Paris">
-        <div class="trip-info">
-          <h3>Paris City Lights</h3>
-          <p>4 Days / 3 Nights | ₹22,999 per person</p>
-          <button class="book-btn" onclick="openBooking('Paris City Lights')">Book Now</button>
-        </div>
+      <div class="entry">
+        <img src="https://source.unsplash.com/400x300/?forest,travel" alt="Kerala">
+        <h3>Whispers of the Backwaters</h3>
+        <p>Float along Kerala’s green waterways and discover peace where time flows slower than the rivers.</p>
+        <a href="#" class="read-btn">Read Story →</a>
       </div>
     </div>
   </section>
 
-  <!-- Booking Modal -->
-  <div id="bookingModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeBooking()">&times;</span>
-      <h2>Book Your Trip</h2>
-      <form id="bookingForm">
-        <label>Full Name ✍️</label>
-        <input type="text" name="name" placeholder="Enter your name" required>
-        <label>Email 📧</label>
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <label>Phone 📱</label>
-        <input type="tel" name="phone" placeholder="Enter your number" required>
-        <label>Trip 🧳</label>
-        <input type="text" id="tripName" name="trip" readonly>
-        <label>Number of Travellers 👯‍♂️</label>
-        <input type="number" name="people" min="1" placeholder="Enter number" required>
-        <button type="submit" class="btn">Submit Booking</button>
-      </form>
-    </div>
-  </div>
+  <!-- Quote Section -->
+  <section class="quote">
+    <blockquote>
+      “Jobs fill your pocket, but adventures fill your soul.”  
+      <span>– Safarverse</span>
+    </blockquote>
+  </section>
 
   <!-- Footer -->
-  <footer id="contact">
-    <p>© 2025 Safarverse | Adventures Made Easy</p>
+  <footer>
+    <p>© 2025 Safarverse | Crafted for travellers with stories to tell 📖</p>
   </footer>
-
-  <!-- Scripts -->
-  <script>
-    const modal = document.getElementById("bookingModal");
-    const tripInput = document.getElementById("tripName");
-
-    function openBooking(trip) {
-      tripInput.value = trip;
-      modal.style.display = "block";
-    }
-
-    function closeBooking() {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    document.getElementById("bookingForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      alert("Thank you! Your booking for " + tripInput.value + " is received.");
-      closeBooking();
-      this.reset();
-    });
-  </script>
 
 </body>
 </html>
