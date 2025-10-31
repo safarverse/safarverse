@@ -351,20 +351,3 @@ body {
     width: 100%;
   }
 }
-
-@media (max-width: 480px) {
-  
-  .hero-section {
-    background-size: contain !important;
-    min-height: 80vh !important;
-  }
-  
-  .hero-section h1 {
-    font-size: 1.4rem !important;
-    margin-top: 40vh !important;
-  }
-  
-  .logo {
-    height: 40px !important;
-  }
-}
