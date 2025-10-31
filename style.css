@@ -9,13 +9,19 @@ html {
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ /*background-image: url('images/homepage.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;*/
   min-height: 100vh;
   margin:0;
   padding: 0;
   background-color: #f5f5f5;
+  /*color: #222;*/
 }
 
 .navbar {
@@ -27,17 +33,20 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Changed */
   padding: 1em 5em;
   z-index: 100;
 }
 
 .logo {
-  height: 120px;
+  height: 120px;          /* increased logo size */
   width: auto;
   object-fit: contain;
   margin-left: 150px;
+  /*transform: translateX(150px);*/
   z-index: 2;
+ 
+   
 }
 
 .nav-links {
@@ -124,14 +133,15 @@ body {
 .day {
   display: flex;
   width: 100%;
-  height: auto;
+  /*margin: 2em 0; */
+  height: auto;  /* adjust height as needed */
   align-items: stretch;
   gap: 0;
 }
 
 .text-box {
-  flex: 1;
-  background-color: rgba(255, 255, 255, 0.8);
+  flex: 1;  /* half width */
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent */
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -140,7 +150,7 @@ body {
 }
 
 .image-box {
-  flex: 1;
+  flex: 1;  /* half width */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +170,7 @@ body {
 /* Our Tour Packages Section */
 .packages-section {
   padding: 60px 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.85); /* Add a subtle white background for readability */
   text-align: center;
 }
 
@@ -218,103 +228,60 @@ body {
 .package-link:hover {
   background-color: #fa5252;
 }
-
 .hero-section {
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* full viewport height */
   background-image: url('images/homepage.jpg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  position: relative;
+  
 }
-
 .hero-section h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 3rem;
+  transform: translate(-50%, -50%); /* Centers both horizontally and vertically */
+  color: white; /* White text color */
+  font-size: 3rem; /* Adjust size as needed */
   font-weight: 700;
   text-align: center;
   margin: 0;
   padding: 0 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  z-index: 50;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Optional: adds shadow for better readability */
+  z-index: 50; /* Ensures it's above the background but below navbar */
   max-width: 90%;
 }
-
-/* Hamburger menu - hidden on desktop */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  z-index: 1001;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 3px 0;
-  transition: 0.3s;
-  border-radius: 2px;
-}
-
-/* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
   
-  /* Show hamburger */
-  .hamburger {
-    display: flex !important;
-  }
-  
-  /* Hero section container */
+  /* Show FULL image on mobile - not cropped */
   .hero-section {
-    position: relative !important;
-    width: 100% !important;
+    height: auto !important; /* Changed from 100vh */
     min-height: 100vh !important;
-    height: auto !important;
-    background-image: none !important; /* Remove background image */
-    background-color: #f5f5f5 !important;
+    background-size: contain !important; /* Changed from cover */
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-color: #f5f5f5 !important; /* White/gray space below image */
     display: flex !important;
-    flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    padding-top: 80px !important; /* Space for navbar */
+    justify-content: center !important;
   }
   
-  /* Show image as actual img element */
-  .hero-bg-image {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    position: relative !important;
-  }
-  
-  /* Heading - OVERLAY ON IMAGE */
+  /* Heading positioning */
   .hero-section h1 {
-    position: absolute !important;
-    top: 50% !important; /* Center on entire hero-section */
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    font-size: 1.3rem !important;
-    padding: 15px !important;
-    max-width: 85% !important;
+    position: relative !important; /* Changed from absolute */
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    font-size: 1.8rem !important;
+    padding: 20px !important;
+    max-width: 90% !important;
     line-height: 1.3 !important;
     text-align: center !important;
-    margin: 0 !important;
-    color: white !important;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7) !important;
-    z-index: 50 !important;
+    margin-top: 50vh !important; /* Position text over image */
   }
   
-  /* Navbar */
+  /* Fix navbar overflow */
   .navbar {
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -322,14 +289,14 @@ body {
     align-items: center !important;
   }
   
-  /* Logo bigger */
+  /* Logo on left, smaller */
   .logo {
-    height: 80px !important;
+    height: 50px !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
   
-  /* Mobile menu */
+  /* Update nav-links mobile menu */
   .nav-links {
     display: none !important;
     position: fixed !important;
@@ -341,13 +308,14 @@ body {
     flex-direction: column !important;
     padding: 80px 20px 20px 20px !important;
     transition: right 0.3s ease !important;
-    z-index: 1000 !important;
+    z-index: 999 !important;
     transform: none !important;
     left: auto !important;
     margin: 0 !important;
     gap: 1.5em !important;
   }
   
+  /* When hamburger is clicked - show menu */
   .nav-links.active {
     display: flex !important;
     right: 0 !important;
@@ -364,53 +332,21 @@ body {
     display: block;
     width: 100%;
   }
-  
-  /* Dropdown */
-  .dropdown-content {
-    position: relative !important;
-    left: 0 !important;
-    transform: none !important;
-    box-shadow: none !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    margin-top: 10px !important;
-  }
-  
-  .dropdown-content a {
-    color: #fff !important;
-  }
-  
-  /* Packages */
-  .packages-section {
-    padding: 40px 10px !important;
-  }
-  
-  .packages-grid {
-    grid-template-columns: 1fr !important;
-    width: 95% !important;
-  }
 }
 
 @media (max-width: 480px) {
+  
+  .hero-section {
+    background-size: contain !important;
+    min-height: 80vh !important;
+  }
+  
   .hero-section h1 {
-    font-size: 1.1rem !important;
+    font-size: 1.4rem !important;
+    margin-top: 40vh !important;
   }
   
   .logo {
-    height: 70px !important;
+    height: 40px !important;
   }
 }
-
-@media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 1.1rem !important;
-  }
-  
-  .logo {
-    height: 70px !important;
-  }
-}
-/* Hero background image (hidden on desktop) */
-.hero-bg-image {
-  display: none;
-}
-
