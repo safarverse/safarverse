@@ -9,19 +9,13 @@ html {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- /*background-image: url('images/homepage.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 100vh;*/
   min-height: 100vh;
   margin:0;
   padding: 0;
   background-color: #f5f5f5;
-  /*color: #222;*/
 }
 
 .navbar {
@@ -33,20 +27,17 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Changed */
+  justify-content: space-between;
   padding: 1em 5em;
   z-index: 100;
 }
 
 .logo {
-  height: 120px;          /* increased logo size */
+  height: 120px;
   width: auto;
   object-fit: contain;
   margin-left: 150px;
-  /*transform: translateX(150px);*/
   z-index: 2;
- 
-   
 }
 
 .nav-links {
@@ -133,15 +124,14 @@ body {
 .day {
   display: flex;
   width: 100%;
-  /*margin: 2em 0; */
-  height: auto;  /* adjust height as needed */
+  height: auto;
   align-items: stretch;
   gap: 0;
 }
 
 .text-box {
-  flex: 1;  /* half width */
-  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent */
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -150,7 +140,7 @@ body {
 }
 
 .image-box {
-  flex: 1;  /* half width */
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,7 +160,7 @@ body {
 /* Our Tour Packages Section */
 .packages-section {
   padding: 60px 0;
-  background: rgba(255, 255, 255, 0.85); /* Add a subtle white background for readability */
+  background: rgba(255, 255, 255, 0.85);
   text-align: center;
 }
 
@@ -228,29 +218,51 @@ body {
 .package-link:hover {
   background-color: #fa5252;
 }
+
 .hero-section {
   width: 100%;
-  height: 100vh; /* full viewport height */
+  height: 100vh;
   background-image: url('images/homepage.jpg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  
+  position: relative;
 }
+
 .hero-section h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centers both horizontally and vertically */
-  color: white; /* White text color */
-  font-size: 3rem; /* Adjust size as needed */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
   margin: 0;
   padding: 0 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Optional: adds shadow for better readability */
-  z-index: 50; /* Ensures it's above the background but below navbar */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 50;
   max-width: 90%;
+}
+
+/* Hamburger menu - hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
 }
 
 /* ========== MOBILE RESPONSIVE ========== */
@@ -269,7 +281,6 @@ body {
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    display: block !important; /* Changed from flex */
   }
   
   /* Heading - CENTERED OVER THE IMAGE */
@@ -283,8 +294,7 @@ body {
     max-width: 85% !important;
     line-height: 1.3 !important;
     text-align: center !important;
-    margin: 0 !important; /* Remove all margins */
-    margin-top: 0 !important; /* Force remove margin-top */
+    margin: 0 !important;
     color: white !important;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7) !important;
     z-index: 50 !important;
