@@ -1,76 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safarverse | Adventure Journal</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voyagera | Travel Beyond Limits</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">
-      <img src="images/Safarverse.png" alt="Safarverse logo" class="logo-img">
-  Safarverse
-      </div>
+    <div class="logo">Voyagera</div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Destinations</a>
-      <a href="#">Stories</a>
-      <a href="#">Contact</a>
+      <a href="#trips">Trips</a>
+      <a href="#map">Destinations</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Forest adventure" class="hero-bg">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="videos/hero.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="hero-content">
-      <h1>Write Your Next Chapter in the Wild</h1>
-      <p>Every trail tells a story. Let yours begin with Safarverse — where adventures turn into memories.</p>
-      <a href="#" class="btn">Start Exploring</a>
+      <h1>Travel Beyond Limits 🌍</h1>
+      <p>Discover curated adventures across the world. Luxury, fun, and unforgettable experiences await!</p>
+      <a href="#trips" class="btn">Start Your Journey</a>
     </div>
   </section>
 
-  <!-- Journal Section -->
-  <section class="journal">
-    <h2>Travel Diaries</h2>
-    <div class="entries">
-      <div class="entry">
-        <img src="https://source.unsplash.com/400x300/?mountains,travel" alt="Himalayas">
-        <h3>The Call of the Himalayas</h3>
-        <p>Trekking through the misty trails of Himachal, surrounded by pine trees and peace — a journey for the soul.</p>
-        <a href="#" class="read-btn">Read Story →</a>
-      </div>
-      <div class="entry">
-        <img src="https://source.unsplash.com/400x300/?beach,travel" alt="Goa">
-        <h3>Footprints in the Sand</h3>
-        <p>Golden sunsets, guitar tunes, and strangers who became family — Goa has its own rhythm.</p>
-        <a href="#" class="read-btn">Read Story →</a>
-      </div>
-      <div class="entry">
-        <img src="https://source.unsplash.com/400x300/?forest,travel" alt="Kerala">
-        <h3>Whispers of the Backwaters</h3>
-        <p>Float along Kerala’s green waterways and discover peace where time flows slower than the rivers.</p>
-        <a href="#" class="read-btn">Read Story →</a>
-      </div>
+  <!-- Trip Filter Section -->
+  <section class="filters">
+    <h2>Travel Styles</h2>
+    <div class="filter-buttons">
+      <button>Adventure</button>
+      <button>Luxury</button>
+      <button>Budget</button>
+      <button>Group</button>
+      <button>Solo</button>
     </div>
   </section>
 
-  <!-- Quote Section -->
-  <section class="quote">
-    <blockquote>
-      “Jobs fill your pocket, but adventures fill your soul.”  
-      <span>– Safarverse</span>
-    </blockquote>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Safarverse | Crafted for travellers with stories to tell 📖</p>
-  </footer>
-
-</body>
-</html>
+  <!-- Trips Section -->
+  <section id="trips" class="trips">
+    <h2>Featured Trips</h2>
