@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safarverse Universe | Adventures Await</title>
+  <title>Safarverse Globe Explorer</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
     <nav>
       <a href="#">Home</a>
       <a href="#trips">Trips</a>
-      <a href="#community">Community</a>
+      <a href="#map">Map</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -27,58 +27,47 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1>Welcome to the Safarverse Universe 🌌</h1>
-      <p>Your Universe of Adventures — Age-group trips, budget-friendly options, and hidden gems await!</p>
-      <a href="#trips" class="btn">Join the Adventure</a>
+      <h1>Explore the World, One Adventure at a Time 🌍</h1>
+      <p>Discover curated trips across mountains, beaches, forests, and cities. Let your journey begin!</p>
+      <a href="#trips" class="btn">Book Your Adventure</a>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map" class="map-section">
+    <h2>Choose Your Destination</h2>
+    <div class="map-placeholder">
+      <p>Interactive map coming soon!</p>
     </div>
   </section>
 
   <!-- Trips Section -->
   <section id="trips" class="trips">
-    <h2>Explore Our Trips</h2>
+    <h2>Featured Trips</h2>
     <div class="trip-cards">
       <div class="trip-card">
-        <img src="https://source.unsplash.com/400x300/?goa,beach" alt="Goa Adventure">
+        <img src="https://source.unsplash.com/400x300/?beach,maldives" alt="Maldives">
         <div class="trip-info">
-          <h3>Goa Adventure</h3>
-          <p>3 Days / 2 Nights | ₹8,999 per person</p>
-          <button class="book-btn" onclick="openBooking('Goa Adventure')">Book Now</button>
+          <h3>Maldives Escape</h3>
+          <p>5 Days / 4 Nights | ₹25,999 per person</p>
+          <button class="book-btn" onclick="openBooking('Maldives Escape')">Book Now</button>
         </div>
       </div>
       <div class="trip-card">
-        <img src="https://source.unsplash.com/400x300/?kerala,backwaters" alt="Kerala Backwaters">
+        <img src="https://source.unsplash.com/400x300/?mountains,nepal" alt="Nepal Trek">
         <div class="trip-info">
-          <h3>Kerala Backwaters</h3>
-          <p>4 Days / 3 Nights | ₹12,499 per person</p>
-          <button class="book-btn" onclick="openBooking('Kerala Backwaters')">Book Now</button>
+          <h3>Nepal Himalayan Trek</h3>
+          <p>6 Days / 5 Nights | ₹18,499 per person</p>
+          <button class="book-btn" onclick="openBooking('Nepal Himalayan Trek')">Book Now</button>
         </div>
       </div>
       <div class="trip-card">
-        <img src="https://source.unsplash.com/400x300/?mountains,trekking" alt="Himalayan Trek">
+        <img src="https://source.unsplash.com/400x300/?city,paris" alt="Paris">
         <div class="trip-info">
-          <h3>Himalayan Trek</h3>
-          <p>5 Days / 4 Nights | ₹15,999 per person</p>
-          <button class="book-btn" onclick="openBooking('Himalayan Trek')">Book Now</button>
+          <h3>Paris City Lights</h3>
+          <p>4 Days / 3 Nights | ₹22,999 per person</p>
+          <button class="book-btn" onclick="openBooking('Paris City Lights')">Book Now</button>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Community Section -->
-  <section id="community" class="community">
-    <h2>Why Safarverse?</h2>
-    <div class="features">
-      <div class="feature-card">
-        <h3>🎯 Age-group Trips</h3>
-        <p>Travel with like-minded adventurers in your age group.</p>
-      </div>
-      <div class="feature-card">
-        <h3>💰 Budget-Friendly</h3>
-        <p>Memorable trips without breaking the bank.</p>
-      </div>
-      <div class="feature-card">
-        <h3>🌿 Hidden Gems</h3>
-        <p>Explore places off the beaten path for unique experiences.</p>
       </div>
     </div>
   </section>
