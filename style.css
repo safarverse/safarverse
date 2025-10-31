@@ -15,11 +15,11 @@ body {
 }
 
 .logo-img {
-  height: 70px;        /* Adjust the size of your logo */
+  height: 80px;        /* Adjust the size of your logo */
   width: auto;
   margin-right: 3px;  /* Space between logo and text */
   object-fit: contain;
-  margin-top: -8px;
+  margin-top: -10px;
 }
 
 /* Navbar */
