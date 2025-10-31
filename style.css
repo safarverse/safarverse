@@ -15,7 +15,7 @@ body {
 }
 
 .logo-img {
-  height: 60px;        /* Adjust the size of your logo */
+  height: 70px;        /* Adjust the size of your logo */
   width: auto;
   margin-right: 10px;  /* Space between logo and text */
   object-fit: contain;
