@@ -5,6 +5,21 @@ body {
   color: #3e3b33;
   line-height: 1.6;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Kalam', cursive;
+  font-size: 1.8rem;
+  color: #a66a2c;
+  font-weight: bold;
+}
+
+.logo-img {
+  height: 40px;        /* Adjust the size of your logo */
+  width: auto;
+  margin-right: 10px;  /* Space between logo and text */
+  object-fit: contain;
+}
 
 /* Navbar */
 .navbar {
@@ -18,6 +33,7 @@ body {
   top: 0;
   z-index: 1000;
 }
+
 .navbar .logo {
   font-family: 'Kalam', cursive;
   font-size: 1.8rem;
