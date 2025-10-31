@@ -171,4 +171,101 @@ body {
 /* Booking Modal */
 .modal {
   display: none;
-  position: fixed
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 8% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h2 {
+  color: #0d9488;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-content .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 80px 20px;
+  text-align: center;
+  background: #e0f2f1;
+}
+
+.testimonials h2 {
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  color: #0d9488;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.testimonial-card h4 {
+  color: #0d9488;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0d9488;
+  color: white;
+}
