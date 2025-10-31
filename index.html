@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safarverse | Adventure Travel</title>
+  <title>Safarverse Universe | Adventures Await</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -18,18 +18,18 @@
     <nav>
       <a href="#">Home</a>
       <a href="#trips">Trips</a>
-      <a href="#stories">Stories</a>
+      <a href="#community">Community</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Adventure" class="hero-bg">
+    <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1>Adventure Awaits 🌍</h1>
-      <p>Discover your next journey with Safarverse — trips for every explorer.</p>
-      <a href="#trips" class="btn">Book Your Trip</a>
+      <h1>Welcome to the Safarverse Universe 🌌</h1>
+      <p>Your Universe of Adventures — Age-group trips, budget-friendly options, and hidden gems await!</p>
+      <a href="#trips" class="btn">Join the Adventure</a>
     </div>
   </section>
 
@@ -64,6 +64,25 @@
     </div>
   </section>
 
+  <!-- Community Section -->
+  <section id="community" class="community">
+    <h2>Why Safarverse?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>🎯 Age-group Trips</h3>
+        <p>Travel with like-minded adventurers in your age group.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💰 Budget-Friendly</h3>
+        <p>Memorable trips without breaking the bank.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌿 Hidden Gems</h3>
+        <p>Explore places off the beaten path for unique experiences.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Booking Modal -->
   <div id="bookingModal" class="modal">
     <div class="modal-content">
@@ -85,13 +104,38 @@
     </div>
   </div>
 
-  <!-- Stories / Testimonials Section -->
-  <section id="stories" class="testimonials">
-    <h2>Traveler Stories</h2>
-    <div class="testimonial-cards">
-      <div class="testimonial-card">
-        <p>“Safarverse made my Goa trip unforgettable! Amazing experiences.”</p>
-        <h4>- Priya</h4>
-      </div>
-      <div class="testimonial-card">
-        <p>“Kerala Backwaters tour was magical and peaceful. Highly recommended!”<
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 Safarverse | Adventures Made Easy</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const modal = document.getElementById("bookingModal");
+    const tripInput = document.getElementById("tripName");
+
+    function openBooking(trip) {
+      tripInput.value = trip;
+      modal.style.display = "block";
+    }
+
+    function closeBooking() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Thank you! Your booking for " + tripInput.value + " is received.");
+      closeBooking();
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
