@@ -3,73 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safarverse | Adventure Journal</title>
+  <title>Safarverse | Adventure Booking</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
       <img src="images/Safarverse.png" alt="Safarverse logo" class="logo-img">
-  Safarverse
-      </div>
+      Safarverse
+    </div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Destinations</a>
-      <a href="#">Stories</a>
-      <a href="#">Contact</a>
+      <a href="#trips">Trips</a>
+      <a href="#testimonials">Stories</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Forest adventure" class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Adventure" class="hero-bg">
     <div class="hero-content">
-      <h1>Write Your Next Chapter in the Wild</h1>
-      <p>Every trail tells a story. Let yours begin with Safarverse — where adventures turn into memories.</p>
-      <a href="#" class="btn">Start Exploring</a>
+      <h1>Your Next Adventure Awaits 🌍</h1>
+      <p>Explore, connect, and make memories on trips that fit your style and budget!</p>
+      <a href="#trips" class="btn">Book Your Trip</a>
     </div>
   </section>
 
-  <!-- Journal Section -->
-  <section class="journal">
-    <h2>Travel Diaries</h2>
-    <div class="entries">
-      <div class="entry">
-        <img src="https://source.unsplash.com/400x300/?mountains,travel" alt="Himalayas">
-        <h3>The Call of the Himalayas</h3>
-        <p>Trekking through the misty trails of Himachal, surrounded by pine trees and peace — a journey for the soul.</p>
-        <a href="#" class="read-btn">Read Story →</a>
+  <!-- Trips Section -->
+  <section id="trips" class="trips">
+    <h2>Our Trips</h2>
+    <div class="trip-cards">
+      <div class="trip-card">
+        <img src="https://source.unsplash.com/400x300/?goa,beach" alt="Goa Adventure">
+        <div class="trip-info">
+          <h3>Goa Adventure</h3>
+          <p>3 Days / 2 Nights | ₹8,999 per person</p>
+          <button class="book-btn" onclick="openBooking('Goa Adventure')">Book Now</button>
+        </div>
       </div>
-      <div class="entry">
-        <img src="https://source.unsplash.com/400x300/?beach,travel" alt="Goa">
-        <h3>Footprints in the Sand</h3>
-        <p>Golden sunsets, guitar tunes, and strangers who became family — Goa has its own rhythm.</p>
-        <a href="#" class="read-btn">Read Story →</a>
+      <div class="trip-card">
+        <img src="https://source.unsplash.com/400x300/?kerala,backwaters" alt="Kerala Backwaters">
+        <div class="trip-info">
+          <h3>Kerala Backwaters</h3>
+          <p>4 Days / 3 Nights | ₹12,499 per person</p>
+          <button class="book-btn" onclick="openBooking('Kerala Backwaters')">Book Now</button>
+        </div>
       </div>
-      <div class="entry">
-        <img src="https://source.unsplash.com/400x300/?forest,travel" alt="Kerala">
-        <h3>Whispers of the Backwaters</h3>
-        <p>Float along Kerala’s green waterways and discover peace where time flows slower than the rivers.</p>
-        <a href="#" class="read-btn">Read Story →</a>
+      <div class="trip-card">
+        <img src="https://source.unsplash.com/400x300/?mountains,trekking" alt="Himalayan Trek">
+        <div class="trip-info">
+          <h3>Himalayan Trek</h3>
+          <p>5 Days / 4 Nights | ₹15,999 per person</p>
+          <button class="book-btn" onclick="openBooking('Himalayan Trek')">Book Now</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Quote Section -->
-  <section class="quote">
-    <blockquote>
-      “Jobs fill your pocket, but adventures fill your soul.”  
-      <span>– Safarverse</span>
-    </blockquote>
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBooking()">&times;</span>
+      <h2>Book Your Trip</h2>
+      <form id="bookingForm">
+        <label>Full Name ✍️</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <label>Email 📧</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <label>Phone 📱</label>
+        <input type="tel" name="phone" placeholder="Enter your number" required>
+        <label>Trip 🧳</label>
+        <input type="text" id="tripName" name="trip" readonly>
+        <label>Number of Travellers 👯‍♂️</label>
+        <input type="number" name="people" min="1" placeholder="Enter number" required>
+        <button type="submit" class="btn">Submit Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Travellers Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>“Safarverse made my first Goa trip unforgettable! Great friends and amazing memories.”</p>
+        <h4>- Priya</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>“The Kerala Backwaters tour was magical. Highly recommend for anyone who loves adventure!”</p>
+        <h4>- Rohit</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>“Himalayan Trek with Safarverse was challenging but so rewarding. Best experience ever!”</p>
+        <h4>- Ananya</h4>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 Safarverse | Crafted for travellers with stories to tell 📖</p>
+  <footer id="contact">
+    <p>© 2025 Safarverse | Join the adventure 🌍</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    const modal = document.getElementById("bookingModal");
+    const tripInput = document.getElementById("tripName");
+
+    function openBooking(trip) {
+      tripInput.value = trip;
+      modal.style.display = "block";
+    }
+
+    function closeBooking() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Thank you! Your booking for " + tripInput.value + " is received.");
+      closeBooking();
+      this.reset();
+    });
+  </script>
 
 </body>
 </html>
