@@ -11,31 +11,28 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 15px 40px;
   background: #fff8f0;
   border-bottom: 2px solid #e0c9a6;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
-.logo {
-  height: 60px;       /* adjust logo height */
-  width: auto;        /* keep image ratio */
-  object-fit: contain;
+.navbar .logo {
+  font-family: 'Kalam', cursive;
+  font-size: 1.8rem;
+  color: #a66a2c;
 }
-
 .navbar nav a {
   text-decoration: none;
   color: #3e3b33;
   margin-left: 25px;
   font-weight: 500;
-  font-size: 1rem;
 }
-
 .navbar nav a:hover {
   color: #a66a2c;
 }
+
 /* Hero Section */
 .hero {
   position: relative;
