@@ -254,49 +254,53 @@ body {
 }
 @media (max-width: 768px) {
   
-  /* Show FULL image on mobile - not cropped */
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex !important;
+  }
+  
+  /* Hero section - KEEP FULL IMAGE VISIBLE (your current setting) */
   .hero-section {
-    height: auto !important; /* Changed from 100vh */
+    position: relative !important;
+    width: 100% !important;
     min-height: 100vh !important;
-    background-size: contain !important; /* Changed from cover */
+    height: auto !important;
+    background-size: contain !important; /* KEEPS YOUR CURRENT SETTING - full image */
     background-position: center top !important;
     background-repeat: no-repeat !important;
-    background-color: #f5f5f5 !important; /* White/gray space below image */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    background-color: #f5f5f5 !important;
   }
   
-  /* Heading positioning */
+  /* Heading - CENTERED OVER THE IMAGE */
   .hero-section h1 {
-    position: relative !important; /* Changed from absolute */
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    font-size: 1.8rem !important;
-    padding: 20px !important;
-    max-width: 90% !important;
+    position: absolute !important;
+    top: 40% !important; /* Adjust this if text appears too high/low */
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 1.5rem !important;
+    padding: 15px !important;
+    max-width: 85% !important;
     line-height: 1.3 !important;
     text-align: center !important;
-    margin-top: 50vh !important; /* Position text over image */
+    margin: 0 !important;
+    color: white !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7) !important;
+    z-index: 50 !important;
   }
   
-  /* Fix navbar overflow */
+  /* Logo - BIGGER */
+  .logo {
+    height: 80px !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Rest of the mobile menu CSS stays the same... */
   .navbar {
     flex-direction: row !important;
     justify-content: space-between !important;
     padding: 0.8em 1em !important;
-    align-items: center !important;
   }
   
-  /* Logo on left, smaller */
-  .logo {
-    height: 50px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  
-  /* Update nav-links mobile menu */
   .nav-links {
     display: none !important;
     position: fixed !important;
@@ -308,45 +312,15 @@ body {
     flex-direction: column !important;
     padding: 80px 20px 20px 20px !important;
     transition: right 0.3s ease !important;
-    z-index: 999 !important;
+    z-index: 1000 !important;
     transform: none !important;
     left: auto !important;
     margin: 0 !important;
     gap: 1.5em !important;
   }
   
-  /* When hamburger is clicked - show menu */
   .nav-links.active {
     display: flex !important;
     right: 0 !important;
-  }
-  
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .nav-links a {
-    font-size: 1.1em !important;
-    padding: 0.8em 1em !important;
-    display: block;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  
-  .hero-section {
-    background-size: contain !important;
-    min-height: 80vh !important;
-  }
-  
-  .hero-section h1 {
-    font-size: 1.4rem !important;
-    margin-top: 40vh !important;
-  }
-  
-  .logo {
-    height: 40px !important;
   }
 }
