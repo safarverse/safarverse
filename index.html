@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safarverse | Adventure Booking</title>
+  <title>Safarverse | Adventure Travel</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
     <nav>
       <a href="#">Home</a>
       <a href="#trips">Trips</a>
-      <a href="#testimonials">Stories</a>
+      <a href="#stories">Stories</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -27,15 +27,15 @@
   <section class="hero">
     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Adventure" class="hero-bg">
     <div class="hero-content">
-      <h1>Your Next Adventure Awaits 🌍</h1>
-      <p>Explore, connect, and make memories on trips that fit your style and budget!</p>
+      <h1>Adventure Awaits 🌍</h1>
+      <p>Discover your next journey with Safarverse — trips for every explorer.</p>
       <a href="#trips" class="btn">Book Your Trip</a>
     </div>
   </section>
 
   <!-- Trips Section -->
   <section id="trips" class="trips">
-    <h2>Our Trips</h2>
+    <h2>Explore Our Trips</h2>
     <div class="trip-cards">
       <div class="trip-card">
         <img src="https://source.unsplash.com/400x300/?goa,beach" alt="Goa Adventure">
@@ -85,57 +85,13 @@
     </div>
   </div>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials">
-    <h2>What Our Travellers Say</h2>
+  <!-- Stories / Testimonials Section -->
+  <section id="stories" class="testimonials">
+    <h2>Traveler Stories</h2>
     <div class="testimonial-cards">
       <div class="testimonial-card">
-        <p>“Safarverse made my first Goa trip unforgettable! Great friends and amazing memories.”</p>
+        <p>“Safarverse made my Goa trip unforgettable! Amazing experiences.”</p>
         <h4>- Priya</h4>
       </div>
       <div class="testimonial-card">
-        <p>“The Kerala Backwaters tour was magical. Highly recommend for anyone who loves adventure!”</p>
-        <h4>- Rohit</h4>
-      </div>
-      <div class="testimonial-card">
-        <p>“Himalayan Trek with Safarverse was challenging but so rewarding. Best experience ever!”</p>
-        <h4>- Ananya</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-    <p>© 2025 Safarverse | Join the adventure 🌍</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    const modal = document.getElementById("bookingModal");
-    const tripInput = document.getElementById("tripName");
-
-    function openBooking(trip) {
-      tripInput.value = trip;
-      modal.style.display = "block";
-    }
-
-    function closeBooking() {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    document.getElementById("bookingForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      alert("Thank you! Your booking for " + tripInput.value + " is received.");
-      closeBooking();
-      this.reset();
-    });
-  </script>
-
-</body>
-</html>
+        <p>“Kerala Backwaters tour was magical and peaceful. Highly recommended!”<
