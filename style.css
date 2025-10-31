@@ -259,9 +259,10 @@ body {
     width: 100% !important;
     height: 100vh !important;
     background-image: url('images/homepage.jpg') !important;
-    background-size: cover !important;
-    background-position: center center !important;
+    background-size: contain !important;
+    background-position: center top !important;
     background-repeat: no-repeat !important;
+    background-color: #000 !important;
     position: relative !important;
     display: block !important;
   }
