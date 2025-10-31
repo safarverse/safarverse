@@ -268,30 +268,39 @@ body {
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
   
-  /* Show hamburger on mobile */
+  /* Show hamburger */
   .hamburger {
     display: flex !important;
   }
   
-  /* Hero section - FULL IMAGE VISIBLE (not cropped) */
+  /* Hero section container */
   .hero-section {
     position: relative !important;
     width: 100% !important;
     min-height: 100vh !important;
     height: auto !important;
-    background-size: contain !important; /* Shows FULL image */
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
-    background-color: #f5f5f5 !important; /* White space if image doesn't fill */
+    background-image: none !important; /* Remove background image */
+    background-color: #f5f5f5 !important;
     display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    padding-top: 80px !important; /* Space for navbar */
   }
   
-  /* Heading - CENTERED ON THE IMAGE AREA */
+  /* Show image as actual img element */
+  .hero-bg-image {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    position: relative !important;
+  }
+  
+  /* Heading - OVERLAY ON IMAGE */
   .hero-section h1 {
     position: absolute !important;
-    top: 35% !important; /* Adjusted to be on image (not below) */
+    top: 50% !important; /* Center on entire hero-section */
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     font-size: 1.3rem !important;
@@ -313,7 +322,7 @@ body {
     align-items: center !important;
   }
   
-  /* Logo - bigger on mobile */
+  /* Logo bigger */
   .logo {
     height: 80px !important;
     margin-left: 0 !important;
@@ -356,7 +365,7 @@ body {
     width: 100%;
   }
   
-  /* Dropdown adjustments */
+  /* Dropdown */
   .dropdown-content {
     position: relative !important;
     left: 0 !important;
@@ -370,7 +379,7 @@ body {
     color: #fff !important;
   }
   
-  /* Packages section */
+  /* Packages */
   .packages-section {
     padding: 40px 10px !important;
   }
@@ -381,6 +390,15 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.1rem !important;
+  }
+  
+  .logo {
+    height: 70px !important;
+  }
+}
 
 @media (max-width: 480px) {
   .hero-section h1 {
@@ -391,3 +409,8 @@ body {
     height: 70px !important;
   }
 }
+/* Hero background image (hidden on desktop) */
+.hero-bg-image {
+  display: none;
+}
+
