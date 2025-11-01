@@ -226,7 +226,6 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   margin-bottom: 20px;
-  width: 100%;
 }
 
 .form-row .form-group {
