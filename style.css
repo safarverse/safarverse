@@ -77,7 +77,8 @@ body {
   /*text-align: center;      /* center text */
   /*line-height: 1.4;   */
 }
-display: block !important;       /* ensure it behaves as a block element */
+.tagline {
+  display: block !important;       /* ensure it behaves as a block element */
   font-size: 1.6rem !important;    /* bigger font */
   font-family: 'Playfair Display', serif !important; /* designer font */
   color: #000 !important;          /* black text */
@@ -87,7 +88,9 @@ display: block !important;       /* ensure it behaves as a block element */
   text-align: center !important;   /* center text inside container */
   line-height: 1.5 !important;     /* spacing between lines */
   background: none !important;     /* remove any background */
-  padding: 0 !important;   
+  padding: 0 !important;           /* remove extra padding */
+}
+
 .btn {
   background-color: #a66a2c;
   color: white;
