@@ -3,46 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goa Itinerary</title>
+  <title>Goa Premium Itinerary</title>
   <style>
+    /* Global Styles */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #ffe6e6; /* light pink background */
+      background-color: #fff0f5; /* soft pastel pink */
       color: #333;
+      scroll-behavior: smooth;
     }
 
-    /* Hero slideshow */
+    h1, h2, p {
+      margin: 0;
+    }
+
+    /* Hero Section */
     .hero {
       position: relative;
       width: 100%;
-      height: 60vh;
+      height: 90vh;
       overflow: hidden;
     }
 
-    .slides {
-      display: flex;
-      width: 300%;
-      height: 100%;
-      animation: slide 15s infinite;
-    }
-
-    .slides img {
+    .hero img {
+      position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 0;
+      animation: fade 15s infinite;
     }
 
-    @keyframes slide {
-      0% { transform: translateX(0%); }
-      33% { transform: translateX(-100%); }
-      66% { transform: translateX(-200%); }
-      100% { transform: translateX(0%); }
+    .hero img:nth-child(1) { animation-delay: 0s; }
+    .hero img:nth-child(2) { animation-delay: 5s; }
+    .hero img:nth-child(3) { animation-delay: 10s; }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      30% { opacity: 1; }
+      35% { opacity: 0; }
+      100% { opacity: 0; }
     }
 
-    /* Itinerary section */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    /* Itinerary Section */
     .itinerary {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 50px auto;
       padding: 0 20px;
     }
@@ -50,104 +89,42 @@
     .day {
       display: flex;
       align-items: center;
-      margin-bottom: 50px;
-      gap: 20px;
+      gap: 30px;
+      margin-bottom: 60px;
       flex-wrap: wrap;
-      background-color: #fff8f0; /* subtle beachy color */
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .day:hover {
+      transform: translateY(-5px);
     }
 
     .day:nth-child(even) {
-      flex-direction: row-reverse; /* alternate sides for images */
+      flex-direction: row-reverse;
     }
 
     .day img {
-      width: 300px;
-      height: 200px;
+      width: 400px;
+      height: 250px;
       object-fit: cover;
-      border-radius: 10px;
       flex-shrink: 0;
+      transition: transform 0.4s ease;
+    }
+
+    .day img:hover {
+      transform: scale(1.05);
     }
 
     .day-content {
       flex: 1;
+      padding: 20px;
     }
 
     .day-content h2 {
-      margin-top: 0;
-      color: #ff6666; /* highlight day title */
-    }
-
-    .day-content p {
-      margin: 10px 0 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .day {
-        flex-direction: column !important;
-        text-align: center;
-      }
-
-      .day img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Hero Slideshow -->
-  <div class="hero">
-    <div class="slides">
-      <img src="https://images.unsplash.com/photo-1600874933061-39fa3b8f9c90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z29hJTIwYmVhY2h8fDB8fDB8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1080" alt="Goa Beach 1">
-      <img src="https://images.unsplash.com/photo-1600607689698-64bc2f36d5c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z29hJTIwYmVhY2h8fDB8fDB8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1080" alt="Goa Beach 2">
-      <img src="https://images.unsplash.com/photo-1602334519200-5932f46aeb8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGdvaSUyMGJlYWNofHwwfHx8fDE2OTg1MDMwNzQ&ixlib=rb-4.0.3&q=80&w=1080" alt="Goa Beach 3">
-    </div>
-  </div>
-
-  <!-- Itinerary Section -->
-  <div class="itinerary">
-    <!-- Day 1 -->
-    <div class="day">
-      <img src="https://images.unsplash.com/photo-1558980664-10a8b976e1e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 1">
-      <div class="day-content">
-        <h2>Day 1: Arrival & Beach Relaxation</h2>
-        <p>Arrive in Goa, check into your hotel, and spend the day relaxing at Calangute Beach. Enjoy the sunset and try local seafood at a beach shack.</p>
-      </div>
-    </div>
-
-    <!-- Day 2 -->
-    <div class="day">
-      <img src="https://images.unsplash.com/photo-1589238669727-1a5c04a44a6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 2">
-      <div class="day-content">
-        <h2>Day 2: North Goa Sightseeing</h2>
-        <p>Visit Fort Aguada, Chapora Fort, and explore the vibrant markets of Baga and Anjuna. End the day at Vagator Beach for a spectacular sunset.</p>
-      </div>
-    </div>
-
-    <!-- Day 3 -->
-    <div class="day">
-      <img src="https://images.unsplash.com/photo-1582719478250-c1aa3b62d53b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 3">
-      <div class="day-content">
-        <h2>Day 3: South Goa Exploration</h2>
-        <p>Spend the day visiting Palolem Beach, Colva Beach, and Cabo De Rama Fort. Enjoy water sports or just relax on the serene beaches.</p>
-      </div>
-    </div>
-
-    <!-- Day 4 -->
-    <div class="day">
-      <img src="https://images.unsplash.com/photo-1604213458394-8a6eea9c25f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 4">
-      <div class="day-content">
-        <h2>Day 4: Departure</h2>
-        <p>Morning visit to spice plantations or a short city tour. Check out and head to the airport or railway station for your onward journey.</p>
-      </div>
-    </div>
-  </div>
-
-</body>
-</html>
-
+      font-size: 1.8rem;
+      color: #ff3366;
+      margin-bottom: 15px;
