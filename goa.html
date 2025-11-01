@@ -101,147 +101,262 @@
     <div id="itineraryDetails"></div>
   </div>
 </div>
+<!-- Booking Form Modal -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content booking-form-modal">
+    <div class="booking-background" id="bookingBackground"></div>
+    <span class="close" onclick="closeBooking()">&times;</span>
+    <h2 id="bookingTitle">Book Your Goa Trip</h2>
+    <form id="bookingForm" onsubmit="submitBooking(event)">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
 
+      <div class="form-group">
+        <label for="contact">Contact Number *</label>
+        <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="city">Current City *</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="travelDate">Travel Date *</label>
+          <input type="date" id="travelDate" name="travelDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="travelCount">Number of Travelers *</label>
+          <input type="number" id="travelCount" name="travelCount" min="1" max="20" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message (Optional)</label>
+        <textarea id="message" name="message" rows="4" placeholder="Any special requirements or questions..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Booking Request</button>
+    </form>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Safarverse | Crafted for travellers with stories to tell 📖</p>
   </footer>
 
-      <!-- JavaScript -->
-  <script>
-    // Slider code
-    window.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelector('.slides');
-      let index = 0;
+     <!-- JavaScript -->
+<script>
+  // Slider code
+  window.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelector('.slides');
+    let index = 0;
 
-      function showNextSlide() {
-        index++;
-        slides.style.transition = 'transform 1s ease-in-out';
-        slides.style.transform = `translateX(-${index * 100}vw)`;
+    function showNextSlide() {
+      index++;
+      slides.style.transition = 'transform 1s ease-in-out';
+      slides.style.transform = `translateX(-${index * 100}vw)`;
 
-        if (index === 3) {
+      if (index === 3) {
+        setTimeout(() => {
+          slides.style.transition = 'none';
+          index = 0;
+          slides.style.transform = `translateX(0)`;
+          
           setTimeout(() => {
-            slides.style.transition = 'none';
-            index = 0;
-            slides.style.transform = `translateX(0)`;
-            
-            setTimeout(() => {
-              slides.style.transition = 'transform 1s ease-in-out';
-            }, 50);
-          }, 1000);
-        }
+            slides.style.transition = 'transform 1s ease-in-out';
+          }, 50);
+        }, 1000);
       }
+    }
 
-      setInterval(showNextSlide, 4000);
-    });
+    setInterval(showNextSlide, 4000);
+  });
 
-    // Itinerary data
-    const itineraries = {
+  // Itinerary data
+  const itineraries = {
+    north: {
+      title: 'North Goa - 3 Days / 2 Nights',
+      content: `
+        <h4>Day 1: Arrival & Beach Vibes</h4>
+        <p><strong>Morning:</strong> Arrival at Goa Airport/Station. Check-in to hotel.</p>
+        <p><strong>Afternoon:</strong> Visit Fort Aguada and Candolim Beach.</p>
+        <p><strong>Evening:</strong> Explore Calangute Beach & beachside cafes.</p>
+        <p><strong>Night:</strong> Dinner at Baga Beach. Optional: Club hopping at Tito's Lane.</p>
+        
+        <h4>Day 2: Adventure & Culture</h4>
+        <p><strong>Morning:</strong> Water sports at Baga Beach (Parasailing, Jet Ski, Banana Ride).</p>
+        <p><strong>Afternoon:</strong> Visit Anjuna Flea Market (Wed/Sat) or explore Chapora Fort.</p>
+        <p><strong>Evening:</strong> Sunset at Vagator Beach.</p>
+        <p><strong>Night:</strong> Beach party or shack hopping.</p>
+        
+        <h4>Day 3: Departure</h4>
+        <p><strong>Morning:</strong> Last-minute shopping or beach relaxation.</p>
+        <p><strong>Afternoon:</strong> Check-out and departure.</p>
+        
+        <p><strong>Package Includes:</strong> Accommodation, Breakfast, Sightseeing (AC Vehicle), Airport/Station Transfers</p>
+        <p><strong>Starting Price:</strong> ₹8,999 per person</p>
+      `
+    },
+    south: {
+      title: 'South Goa - 3 Days / 2 Nights',
+      content: `
+        <h4>Day 1: Arrival & Serenity</h4>
+        <p><strong>Morning:</strong> Arrival at Goa Airport/Station. Check-in to resort.</p>
+        <p><strong>Afternoon:</strong> Visit Palolem Beach - dolphin spotting & kayaking.</p>
+        <p><strong>Evening:</strong> Relax at Colva Beach.</p>
+        <p><strong>Night:</strong> Dinner at beachside shack.</p>
+        
+        <h4>Day 2: Heritage & Nature</h4>
+        <p><strong>Morning:</strong> Visit Cabo De Rama Fort & Agonda Beach.</p>
+        <p><strong>Afternoon:</strong> Explore Old Goa Churches (Basilica of Bom Jesus, Se Cathedral).</p>
+        <p><strong>Evening:</strong> Spice plantation tour with traditional Goan lunch.</p>
+        <p><strong>Night:</strong> Sunset cruise on Mandovi River (optional).</p>
+        
+        <h4>Day 3: Departure</h4>
+        <p><strong>Morning:</strong> Beach relaxation at Butterfly Beach or Benaulim Beach.</p>
+        <p><strong>Afternoon:</strong> Check-out and departure.</p>
+        
+        <p><strong>Package Includes:</strong> Accommodation, Breakfast, Sightseeing (AC Vehicle), Airport/Station Transfers</p>
+        <p><strong>Starting Price:</strong> ₹9,499 per person</p>
+      `
+    },
+    complete: {
+      title: 'Complete Goa - 5 Days / 4 Nights',
+      content: `
+        <h4>Day 1: Arrival & North Goa</h4>
+        <p><strong>Morning:</strong> Arrival. Check-in to North Goa hotel.</p>
+        <p><strong>Afternoon:</strong> Fort Aguada, Candolim, Calangute Beaches.</p>
+        <p><strong>Evening:</strong> Baga Beach nightlife.</p>
+        
+        <h4>Day 2: North Goa Adventure</h4>
+        <p><strong>Morning:</strong> Water sports at Baga Beach.</p>
+        <p><strong>Afternoon:</strong> Anjuna Flea Market & Chapora Fort.</p>
+        <p><strong>Evening:</strong> Sunset at Vagator Beach & beach party.</p>
+        
+        <h4>Day 3: Transfer to South Goa</h4>
+        <p><strong>Morning:</strong> Check-out. Drive to South Goa (1.5 hrs).</p>
+        <p><strong>Afternoon:</strong> Check-in to South Goa resort. Visit Palolem Beach.</p>
+        <p><strong>Evening:</strong> Relax at Colva Beach.</p>
+        
+        <h4>Day 4: South Goa Heritage</h4>
+        <p><strong>Morning:</strong> Old Goa Churches tour.</p>
+        <p><strong>Afternoon:</strong> Spice plantation with Goan lunch.</p>
+        <p><strong>Evening:</strong> Sunset cruise on Mandovi River.</p>
+        
+        <h4>Day 5: Departure</h4>
+        <p><strong>Morning:</strong> Last-minute beach time or shopping.</p>
+        <p><strong>Afternoon:</strong> Check-out and departure.</p>
+        
+        <p><strong>Package Includes:</strong> Accommodation (2N North + 2N South), All Breakfasts, Full Sightseeing (AC Vehicle), All Transfers</p>
+        <p><strong>Starting Price:</strong> ₹14,999 per person</p>
+      `
+    }
+  };
+
+  function showItinerary(type) {
+    const modal = document.getElementById('itineraryModal');
+    const details = document.getElementById('itineraryDetails');
+    const data = itineraries[type];
+    
+    details.innerHTML = `
+      <h2>${data.title}</h2>
+      ${data.content}
+    `;
+    
+    modal.style.display = 'block';
+  }
+
+  function closeItinerary() {
+    document.getElementById('itineraryModal').style.display = 'none';
+  }
+
+  // Booking form functions
+  let selectedPackage = '';
+
+  function showBookingForm(type) {
+    selectedPackage = type;
+    const modal = document.getElementById('bookingModal');
+    const title = document.getElementById('bookingTitle');
+    const background = document.getElementById('bookingBackground');
+    
+    const packageData = {
       north: {
-        title: 'North Goa - 3 Days / 2 Nights',
-        content: `
-          <h4>Day 1: Arrival & Beach Vibes</h4>
-          <p><strong>Morning:</strong> Arrival at Goa Airport/Station. Check-in to hotel.</p>
-          <p><strong>Afternoon:</strong> Visit Fort Aguada and Candolim Beach.</p>
-          <p><strong>Evening:</strong> Explore Calangute Beach & beachside cafes.</p>
-          <p><strong>Night:</strong> Dinner at Baga Beach. Optional: Club hopping at Tito's Lane.</p>
-          
-          <h4>Day 2: Adventure & Culture</h4>
-          <p><strong>Morning:</strong> Water sports at Baga Beach (Parasailing, Jet Ski, Banana Ride).</p>
-          <p><strong>Afternoon:</strong> Visit Anjuna Flea Market (Wed/Sat) or explore Chapora Fort.</p>
-          <p><strong>Evening:</strong> Sunset at Vagator Beach.</p>
-          <p><strong>Night:</strong> Beach party or shack hopping.</p>
-          
-          <h4>Day 3: Departure</h4>
-          <p><strong>Morning:</strong> Last-minute shopping or beach relaxation.</p>
-          <p><strong>Afternoon:</strong> Check-out and departure.</p>
-          
-          <p><strong>Package Includes:</strong> Accommodation, Breakfast, Sightseeing (AC Vehicle), Airport/Station Transfers</p>
-          <p><strong>Starting Price:</strong> ₹8,999 per person</p>
-        `
+        title: 'Book North Goa Trip',
+        image: 'images/north-goa1.jpg'
       },
       south: {
-        title: 'South Goa - 3 Days / 2 Nights',
-        content: `
-          <h4>Day 1: Arrival & Serenity</h4>
-          <p><strong>Morning:</strong> Arrival at Goa Airport/Station. Check-in to resort.</p>
-          <p><strong>Afternoon:</strong> Visit Palolem Beach - dolphin spotting & kayaking.</p>
-          <p><strong>Evening:</strong> Relax at Colva Beach.</p>
-          <p><strong>Night:</strong> Dinner at beachside shack.</p>
-          
-          <h4>Day 2: Heritage & Nature</h4>
-          <p><strong>Morning:</strong> Visit Cabo De Rama Fort & Agonda Beach.</p>
-          <p><strong>Afternoon:</strong> Explore Old Goa Churches (Basilica of Bom Jesus, Se Cathedral).</p>
-          <p><strong>Evening:</strong> Spice plantation tour with traditional Goan lunch.</p>
-          <p><strong>Night:</strong> Sunset cruise on Mandovi River (optional).</p>
-          
-          <h4>Day 3: Departure</h4>
-          <p><strong>Morning:</strong> Beach relaxation at Butterfly Beach or Benaulim Beach.</p>
-          <p><strong>Afternoon:</strong> Check-out and departure.</p>
-          
-          <p><strong>Package Includes:</strong> Accommodation, Breakfast, Sightseeing (AC Vehicle), Airport/Station Transfers</p>
-          <p><strong>Starting Price:</strong> ₹9,499 per person</p>
-        `
+        title: 'Book South Goa Trip',
+        image: 'images/south-goa1.jpg'
       },
       complete: {
-        title: 'Complete Goa - 5 Days / 4 Nights',
-        content: `
-          <h4>Day 1: Arrival & North Goa</h4>
-          <p><strong>Morning:</strong> Arrival. Check-in to North Goa hotel.</p>
-          <p><strong>Afternoon:</strong> Fort Aguada, Candolim, Calangute Beaches.</p>
-          <p><strong>Evening:</strong> Baga Beach nightlife.</p>
-          
-          <h4>Day 2: North Goa Adventure</h4>
-          <p><strong>Morning:</strong> Water sports at Baga Beach.</p>
-          <p><strong>Afternoon:</strong> Anjuna Flea Market & Chapora Fort.</p>
-          <p><strong>Evening:</strong> Sunset at Vagator Beach & beach party.</p>
-          
-          <h4>Day 3: Transfer to South Goa</h4>
-          <p><strong>Morning:</strong> Check-out. Drive to South Goa (1.5 hrs).</p>
-          <p><strong>Afternoon:</strong> Check-in to South Goa resort. Visit Palolem Beach.</p>
-          <p><strong>Evening:</strong> Relax at Colva Beach.</p>
-          
-          <h4>Day 4: South Goa Heritage</h4>
-          <p><strong>Morning:</strong> Old Goa Churches tour.</p>
-          <p><strong>Afternoon:</strong> Spice plantation with Goan lunch.</p>
-          <p><strong>Evening:</strong> Sunset cruise on Mandovi River.</p>
-          
-          <h4>Day 5: Departure</h4>
-          <p><strong>Morning:</strong> Last-minute beach time or shopping.</p>
-          <p><strong>Afternoon:</strong> Check-out and departure.</p>
-          
-          <p><strong>Package Includes:</strong> Accommodation (2N North + 2N South), All Breakfasts, Full Sightseeing (AC Vehicle), All Transfers</p>
-          <p><strong>Starting Price:</strong> ₹14,999 per person</p>
-        `
+        title: 'Book Complete Goa Experience',
+        image: 'images/complete-goa.jpg'
       }
     };
+    
+    title.textContent = packageData[type].title;
+    background.style.backgroundImage = `url('${packageData[type].image}')`;
+    modal.style.display = 'block';
+    
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('travelDate').setAttribute('min', today);
+  }
 
-    function showItinerary(type) {
-      const modal = document.getElementById('itineraryModal');
-      const details = document.getElementById('itineraryDetails');
-      const data = itineraries[type];
-      
-      details.innerHTML = `
-        <h2>${data.title}</h2>
-        ${data.content}
-      `;
-      
-      modal.style.display = 'block';
-    }
+  function closeBooking() {
+    document.getElementById('bookingModal').style.display = 'none';
+    document.getElementById('bookingForm').reset();
+  }
 
-    function closeItinerary() {
-      document.getElementById('itineraryModal').style.display = 'none';
-    }
+  function submitBooking(event) {
+    event.preventDefault();
+    
+    const formData = {
+      package: selectedPackage,
+      name: document.getElementById('name').value,
+      contact: document.getElementById('contact').value,
+      email: document.getElementById('email').value,
+      city: document.getElementById('city').value,
+      travelDate: document.getElementById('travelDate').value,
+      travelCount: document.getElementById('travelCount').value,
+      message: document.getElementById('message').value
+    };
+    
+    console.log('Booking Data:', formData);
+    
+    // Show success message
+    alert(`Thank you ${formData.name}! Your booking request has been submitted. We'll contact you shortly at ${formData.contact}.`);
+    
+    // Close modal and reset form
+    closeBooking();
+    
+    // Here you can add code to send data to your backend/email
+  }
 
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-      const modal = document.getElementById('itineraryModal');
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
+  // Close modal when clicking outside of it
+  window.onclick = function(event) {
+    const itineraryModal = document.getElementById('itineraryModal');
+    const bookingModal = document.getElementById('bookingModal');
+    
+    if (event.target == itineraryModal) {
+      itineraryModal.style.display = 'none';
     }
-  </script>
+    if (event.target == bookingModal) {
+      closeBooking();
+    }
+  }
+</script>
 
 </body>
 </html>
