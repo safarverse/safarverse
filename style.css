@@ -72,13 +72,7 @@ body {
   text-align: center;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
-.section-subtitle {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  color: #6b4b2a;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
+
 .btn {
   background-color: #a66a2c;
   color: white;
@@ -95,8 +89,16 @@ body {
 /* Journal Section */
 .journal {
   text-align: center;
-  padding: 40px 20px 80px;
+  /*padding: 40px;*/
   background: #fff8f0;
+}
+.section-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #6b4b2a;
+  margin-top: 0; 
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 .journal h2 {
   font-family: 'Kalam', cursive;
