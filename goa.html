@@ -244,13 +244,22 @@
   </div>
 
   <script>
-    function showTrip(trip) {
-      document.getElementById('north').style.display = 'none';
-      document.getElementById('south').style.display = 'none';
-      document.getElementById(trip).style.display = 'block';
-      document.getElementById(trip).scrollIntoView({ behavior: 'smooth' });
+  window.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    let index = 0;
+
+    function showNextSlide() {
+      index = (index + 1) % totalSlides;
+      slides.style.transition = 'transform 1s ease-in-out';
+      slides.style.transform = `translateX(-${index * 100}%)`;
     }
-  </script>
+
+    // Change image every 5 seconds
+    setInterval(showNextSlide, 5000);
+  });
+</script>
+
 
 </body>
 </html>
