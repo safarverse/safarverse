@@ -128,3 +128,80 @@
       font-size: 1.8rem;
       color: #ff3366;
       margin-bottom: 15px;
+    }
+
+    .day-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .day img {
+        width: 100%;
+        height: auto;
+      }
+
+      .day {
+        flex-direction: column !important;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1600874933061-39fa3b8f9c90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Goa Beach 1">
+    <img src="https://images.unsplash.com/photo-1600607689698-64bc2f36d5c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Goa Beach 2">
+    <img src="https://images.unsplash.com/photo-1602334519200-5932f46aeb8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Goa Beach 3">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Explore Goa with Safarverse</h1>
+      <p>Your ultimate 4-day tropical getaway</p>
+    </div>
+  </div>
+
+  <!-- Itinerary Section -->
+  <div class="itinerary">
+    <!-- Day 1 -->
+    <div class="day">
+      <img src="https://images.unsplash.com/photo-1558980664-10a8b976e1e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 1">
+      <div class="day-content">
+        <h2>Day 1: Arrival & Beach Relaxation</h2>
+        <p>Arrive in Goa, check into your hotel, and spend the day relaxing at Calangute Beach. Enjoy the sunset and try local seafood at a beach shack.</p>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day">
+      <img src="https://images.unsplash.com/photo-1589238669727-1a5c04a44a6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 2">
+      <div class="day-content">
+        <h2>Day 2: North Goa Sightseeing</h2>
+        <p>Visit Fort Aguada, Chapora Fort, and explore the vibrant markets of Baga and Anjuna. End the day at Vagator Beach for a spectacular sunset.</p>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day">
+      <img src="https://images.unsplash.com/photo-1582719478250-c1aa3b62d53b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 3">
+      <div class="day-content">
+        <h2>Day 3: South Goa Exploration</h2>
+        <p>Spend the day visiting Palolem Beach, Colva Beach, and Cabo De Rama Fort. Enjoy water sports or just relax on the serene beaches.</p>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day">
+      <img src="https://images.unsplash.com/photo-1604213458394-8a6eea9c25f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Day 4">
+      <div class="day-content">
+        <h2>Day 4: Departure</h2>
+        <p>Morning visit to spice plantations or a short city tour. Check out and head to the airport or railway station for your onward journey.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
