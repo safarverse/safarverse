@@ -47,31 +47,39 @@
     </div>
   </div>
 
-  <!-- Options Section -->
-  <div class="options">
-    <h2>Select Your Trip</h2>
-    <button onclick="showTrip('north')">North Goa</button>
-    <button onclick="showTrip('south')">South Goa</button>
-  </div>
+  <!-- Goa Packages Section -->
+  <section class="goa-packages">
+    <h2>Pick Your Perfect Goa Getaway</h2>
 
-  <!-- Trip Details -->
-  <div id="north" class="trip-details">
-    <h3>North Goa Day Trip</h3>
-    <p><strong>Morning:</strong> Visit Fort Aguada and SinQ Beach.</p>
-    <p><strong>Late Morning:</strong> Relax at Baga Beach or Calangute Beach; try water sports.</p>
-    <p><strong>Lunch:</strong> Beach shack at Baga or Calangute (Goan seafood).</p>
-    <p><strong>Afternoon:</strong> Explore Anjuna Beach & Flea Market.</p>
-    <p><strong>Evening:</strong> Sunset at Chapora Fort. Optional nightlife at Tito's Lane or Club Cubana.</p>
-  </div>
+    <div class="package-grid">
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1599064192813-d1dc841d2f0c?auto=format&fit=crop&w=900&q=80" alt="Beachside Resort">
+        <div class="package-content">
+          <h3>Luxury Beach Escape</h3>
+          <p>Indulge in a premium stay by the waves — candlelight dinners, sea breeze mornings, and golden sunsets crafted just for you.</p>
+          <a href="#" class="book-btn">Book Now</a>
+        </div>
+      </div>
 
-  <div id="south" class="trip-details">
-    <h3>South Goa Day Trip</h3>
-    <p><strong>Morning:</strong> Visit Palolem Beach; optional dolphin spotting or kayaking.</p>
-    <p><strong>Late Morning:</strong> Explore Cabo De Rama Fort.</p>
-    <p><strong>Lunch:</strong> Beach shack at Agonda or Palolem Beach (fresh seafood).</p>
-    <p><strong>Afternoon:</strong> Relax at Colva Beach or Butterfly Beach; optional spice plantation visit.</p>
-    <p><strong>Evening:</strong> Sunset at Palolem or Colva Beach; return to hotel.</p>
-  </div>
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1603543592641-71f3ac315e11?auto=format&fit=crop&w=900&q=80" alt="Adventure Goa">
+        <div class="package-content">
+          <h3>Adventure & Vibes</h3>
+          <p>From scuba diving to cliff jumping, find your thrill in the heart of Goa — where every wave is a story waiting to unfold.</p>
+          <a href="#" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=900&q=80" alt="Heritage Goa">
+        <div class="package-content">
+          <h3>Goa Heritage Trail</h3>
+          <p>Walk through Portuguese lanes, colorful homes, and soulful churches — experience Goa’s charm beyond the beaches.</p>
+          <a href="#" class="book-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -94,7 +102,6 @@
             slides.style.transition = 'none';
             index = 0;
             slides.style.transform = `translateX(0)`;
-            
             setTimeout(() => {
               slides.style.transition = 'transform 1s ease-in-out';
             }, 50);
@@ -104,13 +111,6 @@
 
       setInterval(showNextSlide, 4000);
     });
-
-    function showTrip(trip) {
-      document.getElementById('north').style.display = 'none';
-      document.getElementById('south').style.display = 'none';
-      document.getElementById(trip).style.display = 'block';
-      document.getElementById(trip).scrollIntoView({ behavior: 'smooth' });
-    }
   </script>
 
 </body>
