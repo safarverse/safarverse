@@ -100,8 +100,9 @@
     <p>© 2025 Safarverse | Crafted for travellers with stories to tell 📖</p>
   </footer>
 
-    <!-- JavaScript -->
+      <!-- JavaScript -->
   <script>
+    // Slider code
     window.addEventListener('DOMContentLoaded', () => {
       const slides = document.querySelector('.slides');
       let index = 0;
@@ -126,7 +127,117 @@
 
       setInterval(showNextSlide, 4000);
     });
+
+    // Itinerary data
+    const itineraries = {
+      north: {
+        title: 'North Goa - 3 Days / 2 Nights',
+        content: `
+          <h4>Day 1: Arrival & Beach Vibes</h4>
+          <p><strong>Morning:</strong> Arrival at Goa Airport/Station. Check-in to hotel.</p>
+          <p><strong>Afternoon:</strong> Visit Fort Aguada and Candolim Beach.</p>
+          <p><strong>Evening:</strong> Explore Calangute Beach & beachside cafes.</p>
+          <p><strong>Night:</strong> Dinner at Baga Beach. Optional: Club hopping at Tito's Lane.</p>
+          
+          <h4>Day 2: Adventure & Culture</h4>
+          <p><strong>Morning:</strong> Water sports at Baga Beach (Parasailing, Jet Ski, Banana Ride).</p>
+          <p><strong>Afternoon:</strong> Visit Anjuna Flea Market (Wed/Sat) or explore Chapora Fort.</p>
+          <p><strong>Evening:</strong> Sunset at Vagator Beach.</p>
+          <p><strong>Night:</strong> Beach party or shack hopping.</p>
+          
+          <h4>Day 3: Departure</h4>
+          <p><strong>Morning:</strong> Last-minute shopping or beach relaxation.</p>
+          <p><strong>Afternoon:</strong> Check-out and departure.</p>
+          
+          <p><strong>Package Includes:</strong> Accommodation, Breakfast, Sightseeing (AC Vehicle), Airport/Station Transfers</p>
+          <p><strong>Starting Price:</strong> ₹8,999 per person</p>
+        `
+      },
+      south: {
+        title: 'South Goa - 3 Days / 2 Nights',
+        content: `
+          <h4>Day 1: Arrival & Serenity</h4>
+          <p><strong>Morning:</strong> Arrival at Goa Airport/Station. Check-in to resort.</p>
+          <p><strong>Afternoon:</strong> Visit Palolem Beach - dolphin spotting & kayaking.</p>
+          <p><strong>Evening:</strong> Relax at Colva Beach.</p>
+          <p><strong>Night:</strong> Dinner at beachside shack.</p>
+          
+          <h4>Day 2: Heritage & Nature</h4>
+          <p><strong>Morning:</strong> Visit Cabo De Rama Fort & Agonda Beach.</p>
+          <p><strong>Afternoon:</strong> Explore Old Goa Churches (Basilica of Bom Jesus, Se Cathedral).</p>
+          <p><strong>Evening:</strong> Spice plantation tour with traditional Goan lunch.</p>
+          <p><strong>Night:</strong> Sunset cruise on Mandovi River (optional).</p>
+          
+          <h4>Day 3: Departure</h4>
+          <p><strong>Morning:</strong> Beach relaxation at Butterfly Beach or Benaulim Beach.</p>
+          <p><strong>Afternoon:</strong> Check-out and departure.</p>
+          
+          <p><strong>Package Includes:</strong> Accommodation, Breakfast, Sightseeing (AC Vehicle), Airport/Station Transfers</p>
+          <p><strong>Starting Price:</strong> ₹9,499 per person</p>
+        `
+      },
+      complete: {
+        title: 'Complete Goa - 5 Days / 4 Nights',
+        content: `
+          <h4>Day 1: Arrival & North Goa</h4>
+          <p><strong>Morning:</strong> Arrival. Check-in to North Goa hotel.</p>
+          <p><strong>Afternoon:</strong> Fort Aguada, Candolim, Calangute Beaches.</p>
+          <p><strong>Evening:</strong> Baga Beach nightlife.</p>
+          
+          <h4>Day 2: North Goa Adventure</h4>
+          <p><strong>Morning:</strong> Water sports at Baga Beach.</p>
+          <p><strong>Afternoon:</strong> Anjuna Flea Market & Chapora Fort.</p>
+          <p><strong>Evening:</strong> Sunset at Vagator Beach & beach party.</p>
+          
+          <h4>Day 3: Transfer to South Goa</h4>
+          <p><strong>Morning:</strong> Check-out. Drive to South Goa (1.5 hrs).</p>
+          <p><strong>Afternoon:</strong> Check-in to South Goa resort. Visit Palolem Beach.</p>
+          <p><strong>Evening:</strong> Relax at Colva Beach.</p>
+          
+          <h4>Day 4: South Goa Heritage</h4>
+          <p><strong>Morning:</strong> Old Goa Churches tour.</p>
+          <p><strong>Afternoon:</strong> Spice plantation with Goan lunch.</p>
+          <p><strong>Evening:</strong> Sunset cruise on Mandovi River.</p>
+          
+          <h4>Day 5: Departure</h4>
+          <p><strong>Morning:</strong> Last-minute beach time or shopping.</p>
+          <p><strong>Afternoon:</strong> Check-out and departure.</p>
+          
+          <p><strong>Package Includes:</strong> Accommodation (2N North + 2N South), All Breakfasts, Full Sightseeing (AC Vehicle), All Transfers</p>
+          <p><strong>Starting Price:</strong> ₹14,999 per person</p>
+        `
+      }
+    };
+
+    function showItinerary(type) {
+      const modal = document.getElementById('itineraryModal');
+      const details = document.getElementById('itineraryDetails');
+      const data = itineraries[type];
+      
+      details.innerHTML = `
+        <h2>${data.title}</h2>
+        ${data.content}
+      `;
+      
+      modal.style.display = 'block';
+    }
+
+    function closeItinerary() {
+      document.getElementById('itineraryModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById('itineraryModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
   </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
