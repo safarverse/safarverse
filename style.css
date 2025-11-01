@@ -90,7 +90,6 @@ body {
 /* Journal Section */
 .journal {
   text-align: center;
-  margin-top: 60px;  /* space above this section */
   padding: 60px 20px;  /* spacing inside this section */
   background: #fff8f0;
 }
