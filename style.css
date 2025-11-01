@@ -90,7 +90,7 @@ body {
 /* Journal Section */
 .journal {
   text-align: center;
-  padding: 40px 20px;  /* spacing inside this section */
+  padding: 50px 20px 80px;  /* spacing inside this section */
   background: #fff8f0;
 }
 .section-subtitle {
