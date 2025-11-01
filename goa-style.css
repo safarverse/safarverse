@@ -223,8 +223,13 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  max-width: 85%;
-  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
 }
 
 .form-group textarea {
