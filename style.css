@@ -64,6 +64,7 @@ body {
   z-index: 2;
   max-width: 1200px;
   padding: 20px;
+  margin: 0 auto;
 }
 .hero h1 {
   font-family: 'Kalam', cursive;
@@ -89,7 +90,8 @@ body {
 /* Journal Section */
 .journal {
   text-align: center;
-  /*padding: 40px;*/
+  margin-top: 60px;  /* space above this section */
+  padding: 60px 20px;  /* spacing inside this section */
   background: #fff8f0;
 }
 .section-subtitle {
