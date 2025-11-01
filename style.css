@@ -18,10 +18,11 @@ body {
   top: 0;
   z-index: 1000;
 }
-.navbar .logo {
-  font-family: 'Kalam', cursive;
-  font-size: 1.8rem;
-  color: #a66a2c;
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
 }
 .navbar nav a {
   text-decoration: none;
