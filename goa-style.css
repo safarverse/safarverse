@@ -144,31 +144,13 @@ body {
   padding: 10px 25px;
   border-radius: 25px;
   transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-/* Primary button (Book Now) */
-.primary-btn {
-  background-color: #a66a2c;
+  cursor: pointer;background-color: #a66a2c;
   color: #fff !important;
   border: 2px solid #a66a2c;
 }
-
-.primary-btn:hover {
+.book-btn:hover {
   background-color: #8b5523;
   border-color: #8b5523;
-}
-
-/* Secondary button (Itinerary) */
-.secondary-btn {
-  background-color: transparent;
-  color: #a66a2c !important;
-  border: 2px solid #a66a2c;
-}
-
-.secondary-btn:hover {
-  background-color: #a66a2c;
-  color: #fff !important;
 }
 
 /* Booking Form Modal with Background Image */
