@@ -12,7 +12,7 @@ body {
   justify-content: flex-start;
   gap: 50px;   /* you can reduce or increase this */
   align-items: center;
-  padding: 5px 40px;
+  padding: 5px 60px 40px 40px;
   background: #fff8f0;
   border-bottom: 2px solid #e0c9a6;
   position: sticky;
