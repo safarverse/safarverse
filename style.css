@@ -85,7 +85,7 @@ body {
   margin: 20px auto 40px;  
   text-align: center;      
   line-height: 1.5; 
-  background: none; 
+  background: none !important; 
 }
 .btn {
   background-color: #a66a2c;
