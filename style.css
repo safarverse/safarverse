@@ -90,15 +90,15 @@ body {
 /* Journal Section */
 .journal {
   text-align: center;
-  padding: 70px 20px 80px;  /* spacing inside this section */
+  padding: 30px 20px 80px;  /* spacing inside this section */
   background: #fff8f0;
 }
 .section-subtitle {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   color: #6b4b2a;
-  margin-bottom: 10px;
-  margin-top: 5px;
+  margin-bottom: 50px;
+  margin-top: 0px;
   letter-spacing: 0.5px;
 }
 
