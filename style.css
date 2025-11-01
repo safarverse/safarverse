@@ -17,8 +17,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  gap:25px
-  margin-left: -20px;
+}
+.navbar nav {
+  display: flex;
+  gap: 25px; /* spacing between links */
+  position: relative;
+  left: -20px; /* shift all links slightly left */
 }
 .logo img {
   height: 60px;
