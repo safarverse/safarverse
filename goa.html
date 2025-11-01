@@ -27,4 +27,169 @@
     }
 
     .hero img {
-      pos
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 15s infinite;
+    }
+
+    .hero img:nth-child(1) { animation-delay: 0s; }
+    .hero img:nth-child(2) { animation-delay: 5s; }
+    .hero img:nth-child(3) { animation-delay: 10s; }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      30% { opacity: 1; }
+      35% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    /* Options Section */
+    .options {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .options h2 {
+      font-size: 2rem;
+      color: #ff3366;
+      margin-bottom: 30px;
+    }
+
+    .options button {
+      background-color: #ff3366;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      margin: 15px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .options button:hover {
+      transform: translateY(-3px);
+      background-color: #ff6699;
+    }
+
+    /* Trip Details Section */
+    .trip-details {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      display: none; /* Hidden by default */
+    }
+
+    .trip-details h3 {
+      color: #ff3366;
+      margin-bottom: 15px;
+    }
+
+    .trip-details p {
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-text h1 { font-size: 2rem; }
+      .hero-text p { font-size: 1rem; }
+      .options button { width: 80%; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&q=80" alt="Goa Beach 1">
+    <img src="https://images.unsplash.com/photo-1582719478250-c1aa3b62d53b?auto=format&fit=crop&w=1080&q=80" alt="Goa Beach 2">
+    <img src="https://images.unsplash.com/photo-1549887534-6e3c5d56404b?auto=format&fit=crop&w=1080&q=80" alt="Goa Beach 3">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Explore Goa with Safarverse</h1>
+      <p>Choose your perfect day trip</p>
+    </div>
+  </div>
+
+  <!-- Options Section -->
+  <div class="options">
+    <h2>Select Your Trip</h2>
+    <button onclick="showTrip('north')">North Goa</button>
+    <button onclick="showTrip('south')">South Goa</button>
+  </div>
+
+  <!-- Trip Details Section -->
+  <div id="north" class="trip-details">
+    <h3>North Goa Day Trip</h3>
+    <p><strong>Morning:</strong> Visit Fort Aguada and SinQ Beach.</p>
+    <p><strong>Late Morning:</strong> Relax at Baga Beach or Calangute Beach; optional water sports.</p>
+    <p><strong>Lunch:</strong> Beach shack at Baga or Calangute (Goan seafood).</p>
+    <p><strong>Afternoon:</strong> Explore Anjuna Beach and Anjuna Flea Market (Wednesday).</p>
+    <p><strong>Evening:</strong> Sunset at Chapora Fort. Optional nightlife at Tito’s Lane or Club Cubana.</p>
+  </div>
+
+  <div id="south" class="trip-details">
+    <h3>South Goa Day Trip</h3>
+    <p><strong>Morning:</strong> Visit Palolem Beach; optional dolphin spotting or kayaking.</p>
+    <p><strong>Late Morning:</strong> Explore Cabo De Rama Fort.</p>
+    <p><strong>Lunch:</strong> Beach shack at Agonda or Palolem Beach (fresh seafood).</p>
+    <p><strong>Afternoon:</strong> Relax at Colva Beach or Butterfly Beach; optional spice plantation visit.</p>
+    <p><strong>Evening:</strong> Sunset at Palolem or Colva Beach; return to hotel.</p>
+  </div>
+
+  <script>
+    function showTrip(trip) {
+      // Hide both first
+      document.getElementById('north').style.display = 'none';
+      document.getElementById('south').style.display = 'none';
+      // Show selected
+      document.getElementById(trip).style.display = 'block';
+      // Scroll to details
+      document.getElementById(trip).scrollIntoView({behavior: "smooth"});
+    }
+  </script>
+
+</body>
+</html>
