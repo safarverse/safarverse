@@ -78,18 +78,18 @@ body {
   /*line-height: 1.4;   */
 }
 .tagline {
-  display: block !important;       /* ensure it behaves as a block element */
-  font-size: 1.6rem !important;    /* bigger font */
-  font-family: 'Playfair Display', serif !important; /* designer font */
-  color: #000 !important;          /* black text */
-  max-width: 700px !important;     /* wrap text neatly */
-  margin-left: auto !important; 
-  margin-right: auto !important;   /* horizontal center */
-  text-align: center !important;   /* center text inside container */
-  line-height: 1.5 !important;     /* spacing between lines */
-  background: none !important;     /* remove any background */
-  padding: 0 !important;           /* remove extra padding */
+  display: block !important;
+  font-size: 1.6rem !important;
+  font-family: 'Playfair Display', serif !important;
+  color: #000 !important;
+  max-width: 90% !important;     /* use % instead of 700px for better centering */
+  margin: 20px auto 40px !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  background: none !important;
+  padding: 0 !important;
 }
+
 
 .btn {
   background-color: #a66a2c;
