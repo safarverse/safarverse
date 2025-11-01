@@ -10,7 +10,7 @@ body {
 .navbar {
   display: flex;
   justify-content: flex-start;
-  gap: 50px;   /* you can reduce or increase this */
+  gap: 150px;   /* you can reduce or increase this */
   align-items: center;
   padding: 5px 60px 40px 40px;
   background: #fff8f0;
