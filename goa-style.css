@@ -127,21 +127,32 @@ body {
   flex-grow: 1;
   margin-bottom: 25px;
 }
-
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: auto;
+}
 .book-btn {
-  display: inline-block;
-  background-color: #a66a2c;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 25px;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
-  align-self: center;
+  flex: 1;
+  text-align: center;
 }
 
-.book-btn:hover {
+.primary-btn:hover {
   background-color: #8b5523;
+}
+
+/* Secondary button (Itinerary) */
+.secondary-btn {
+  background-color: transparent;
+  color: #a66a2c;
+  border: 2px solid #a66a2c;
+}
+
+.secondary-btn:hover {
+  background-color: #a66a2c;
+  color: #fff;
 }
 
 /* ==============================
