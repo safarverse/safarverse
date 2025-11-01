@@ -42,3 +42,82 @@
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa Beach 1 Clone">
     </div>
     <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Unwind in Goa's Sun, Sand & Serenity</h1>
+    </div>
+  </div>
+
+  <!-- Goa Packages Section -->
+  <section class="goa-packages">
+    <h2>Pick Your Perfect Goa Getaway</h2>
+
+    <div class="package-grid">
+
+      <!-- North Goa -->
+      <div class="package-card">
+        <img src="images/north-goa.jpg" alt="North Goa">
+        <div class="content">
+          <h3>Explore North Goa</h3>
+          <p>From Baga to Anjuna — the heart of Goa’s vibrant energy, beachside cafes, and nightlife awaits you.</p>
+          <a href="#" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- South Goa -->
+      <div class="package-card">
+        <img src="images/south-goa.jpg" alt="South Goa">
+        <div class="content">
+          <h3>Explore South Goa</h3>
+          <p>Unwind amidst serene beaches, ancient churches, and luxury stays in peaceful South Goa.</p>
+          <a href="#" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Complete Goa -->
+      <div class="package-card">
+        <img src="images/complete-goa.jpg" alt="Complete Goa">
+        <div class="content">
+          <h3>Explore Complete Goa</h3>
+          <p>Get the best of both worlds — North’s liveliness and South’s calm — in one ultimate trip.</p>
+          <a href="#" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Safarverse | Crafted for travellers with stories to tell 📖</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelector('.slides');
+      let index = 0;
+
+      function showNextSlide() {
+        index++;
+        slides.style.transition = 'transform 1s ease-in-out';
+        slides.style.transform = `translateX(-${index * 100}vw)`;
+
+        if (index === 3) {
+          setTimeout(() => {
+            slides.style.transition = 'none';
+            index = 0;
+            slides.style.transform = `translateX(0)`;
+            
+            setTimeout(() => {
+              slides.style.transition = 'transform 1s ease-in-out';
+            }, 50);
+          }, 1000);
+        }
+      }
+
+      setInterval(showNextSlide, 4000);
+    });
+  </script>
+
+</body>
+</html>
