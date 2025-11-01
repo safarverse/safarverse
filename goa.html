@@ -1,104 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goa Trip Options</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goa Trip Options</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff0f5;
-    color: #333;
-    scroll-behavior: smooth;
-  }
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
 
-  .hero-slider {
-    position: relative;
-    width: 100%;
-    height: 85vh;
-    overflow: hidden;
-  }
+    h1, h2, p {
+      margin: 0;
+    }
 
-  .slides {
-    display: flex;
-    width: 400%; /* 3 images + clone */
-  }
+    /* ✅ HERO SLIDER */
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      overflow: hidden;
+    }
 
-  .slides img {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
+    .slides {
+      display: flex;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
 
-  .hero-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.15));
-    z-index: 1;
-  }
+    .slides img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
-  .hero-text {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    z-index: 2;
-    padding: 20px 40px;
-    user-select: none;
-  }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.15));
+      z-index: 1;
+    }
 
-  .hero-text h1 {
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 2px;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  }
-</style>
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+      padding: 20px 40px;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    /* ✅ OPTIONS SECTION */
+    .options {
+      max-width: 800px;
+      margin: 100px auto 70px;
+      text-align: center;
+    }
+
+    .options h2 {
+      font-size: 2.2rem;
+      color: #ff3366;
+      margin-bottom: 35px;
+    }
+
+    .options button {
+      background-color: #ff3366;
+      color: #fff;
+      border: none;
+      padding: 15px 35px;
+      margin: 15px;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .options button:hover {
+      transform: translateY(-4px);
+      background-color: #ff6699;
+    }
+
+    /* ✅ TRIP DETAILS SECTION */
+    .trip-details {
+      max-width: 900px;
+      margin: 30px auto 70px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      display: none;
+    }
+
+    .trip-details h3 {
+      color: #ff3366;
+      margin-bottom: 15px;
+    }
+
+    .trip-details p {
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* ✅ RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-text h1 { font-size: 2rem; }
+      .options button { width: 80%; margin: 10px 0; }
+      .hero-slider { height: 75vh; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="hero-slider">
-  <div class="slides">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa 1">
-    <img src="images/goa1.jpg" alt="Goa 2">
-    <img src="images/goa4.jpg" alt="Goa 3">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa 1 Clone">
+  <!-- ✅ HERO SECTION -->
+  <div class="hero-slider">
+    <div class="slides">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa Beach 1">
+      <img src="images/goa1.jpg" alt="Goa Beach 2">
+      <img src="images/goa4.jpg" alt="Goa Beach 3">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa Beach 1 Clone">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Unwind in Goa's Sun, Sand & Serenity</h1>
+    </div>
   </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <h1>Unwind in Goa's Sun, Sand & Serenity</h1>
+
+  <!-- ✅ OPTIONS SECTION -->
+  <div class="options">
+    <h2>Select Your Trip</h2>
+    <button onclick="showTrip('north')">North Goa</button>
+    <button onclick="showTrip('south')">South Goa</button>
   </div>
-</div>
 
-<script>
-  const slides = document.querySelector('.slides');
-  const slideCount = slides.children.length;
-  let index = 0;
+  <!-- ✅ TRIP DETAILS -->
+  <div id="north" class="trip-details">
+    <h3>North Goa Day Trip</h3>
+    <p><strong>Morning:</strong> Visit Fort Aguada and SinQ Beach.</p>
+    <p><strong>Late Morning:</strong> Relax at Baga Beach or Calangute Beach; try water sports.</p>
+    <p><strong>Lunch:</strong> Beach shack at Baga or Calangute (Goan seafood).</p>
+    <p><strong>Afternoon:</strong> Explore Anjuna Beach & Flea Market.</p>
+    <p><strong>Evening:</strong> Sunset at Chapora Fort. Optional nightlife at Tito's Lane or Club Cubana.</p>
+  </div>
 
-  function nextSlide() {
-    index++;
-    slides.style.transition = 'transform 1s ease-in-out';
-    slides.style.transform = `translateX(-${index * 100}vw)`;
+  <div id="south" class="trip-details">
+    <h3>South Goa Day Trip</h3>
+    <p><strong>Morning:</strong> Visit Palolem Beach; optional dolphin spotting or kayaking.</p>
+    <p><strong>Late Morning:</strong> Explore Cabo De Rama Fort.</p>
+    <p><strong>Lunch:</strong> Beach shack at Agonda or Palolem Beach (fresh seafood).</p>
+    <p><strong>Afternoon:</strong> Relax at Colva Beach or Butterfly Beach; optional spice plantation visit.</p>
+    <p><strong>Evening:</strong> Sunset at Palolem or Colva Beach; return to hotel.</p>
+  </div>
 
-    if(index === slideCount - 1) { // If last (clone) image
-      setTimeout(() => {
-        slides.style.transition = 'none'; // remove transition
-        index = 0;
-        slides.style.transform = `translateX(0)`; // jump back to first
-        setTimeout(() => { slides.style.transition = 'transform 1s ease-in-out'; }, 50);
-      }, 1000); // same as transition time
+  <!-- ✅ JAVASCRIPT -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelector('.slides');
+      let index = 0;
+
+      function showNextSlide() {
+        index++;
+        slides.style.transition = 'transform 1s ease-in-out';
+        slides.style.transform = `translateX(-${index * 100}vw)`;
+
+        // When we reach the cloned first image (index 3), instantly jump back to real first image
+        if (index === 3) {
+          setTimeout(() => {
+            slides.style.transition = 'none'; // Disable animation
+            index = 0;
+            slides.style.transform = `translateX(0)`; // Jump to first
+            
+            // Re-enable transition after jump
+            setTimeout(() => {
+              slides.style.transition = 'transform 1s ease-in-out';
+            }, 50);
+          }, 1000); // Wait for slide animation to finish
+        }
+      }
+
+      // Change image every 4 seconds
+      setInterval(showNextSlide, 4000);
+    });
+
+    // Show trip details
+    function showTrip(trip) {
+      document.getElementById('north').style.display = 'none';
+      document.getElementById('south').style.display = 'none';
+      document.getElementById(trip).style.display = 'block';
+      document.getElementById(trip).scrollIntoView({ behavior: 'smooth' });
     }
-  }
-
-  setInterval(nextSlide, 4000); // change every 4s
-</script>
+  </script>
 
 </body>
 </html>
