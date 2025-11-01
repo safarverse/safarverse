@@ -77,16 +77,17 @@ body {
   /*text-align: center;      /* center text */
   /*line-height: 1.4;   */
 }
-.tagline {
-  font-size: 1.6rem;
-  font-family: 'Playfair Display', serif;
-  color: #000;             
-  max-width: 700px;        
-  margin: 20px auto 40px;  
-  text-align: center;      
-  line-height: 1.5; 
-  background: none !important; 
-}
+display: block !important;       /* ensure it behaves as a block element */
+  font-size: 1.6rem !important;    /* bigger font */
+  font-family: 'Playfair Display', serif !important; /* designer font */
+  color: #000 !important;          /* black text */
+  max-width: 700px !important;     /* wrap text neatly */
+  margin-left: auto !important; 
+  margin-right: auto !important;   /* horizontal center */
+  text-align: center !important;   /* center text inside container */
+  line-height: 1.5 !important;     /* spacing between lines */
+  background: none !important;     /* remove any background */
+  padding: 0 !important;   
 .btn {
   background-color: #a66a2c;
   color: white;
