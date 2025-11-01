@@ -43,7 +43,7 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;
