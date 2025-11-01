@@ -9,8 +9,7 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: flex-start;
-  gap: 150px;   /* you can reduce or increase this */
+  justify-content: space-contain;
   align-items: center;
   padding: 5px 5px;
   background: #fff8f0;
