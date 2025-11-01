@@ -134,26 +134,43 @@ body {
   justify-content: center;
   margin-top: auto;
 }
+
 .book-btn {
+  display: inline-block;
   flex: 1;
   text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Primary button (Book Now) */
+.primary-btn {
+  background-color: #a66a2c;
+  color: #fff !important;
+  border: 2px solid #a66a2c;
 }
 
 .primary-btn:hover {
   background-color: #8b5523;
+  border-color: #8b5523;
 }
 
 /* Secondary button (Itinerary) */
 .secondary-btn {
   background-color: transparent;
-  color: #a66a2c;
+  color: #a66a2c !important;
   border: 2px solid #a66a2c;
 }
 
 .secondary-btn:hover {
   background-color: #a66a2c;
-  color: #fff;
+  color: #fff !important;
 }
+
 /* Booking Form Modal with Background Image */
 .booking-form-modal {
   max-width: 600px;
