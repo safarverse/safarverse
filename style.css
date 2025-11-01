@@ -232,6 +232,45 @@ footer {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+.destination-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.destination-content h3 {
+  font-family: 'Kalam', cursive;
+  color: #a66a2c;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.destination-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.destination-content ul li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.destination-content ul li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #a66a2c;
+  font-weight: bold;
+}
+
+.destination-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
 
 
 
