@@ -192,6 +192,7 @@ footer {
   margin-left: 25px;
   font-weight: 500;
   cursor: pointer;
+  padding-bottom: 15px; /* Creates hover area to bridge the gap */
 }
 
 .dropdown-link:hover {
@@ -209,7 +210,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   border-radius: 8px;
   padding: 10px 0;
-  margin-top: 10px;
+  margin-top: 5px; /* Reduced gap from 10px to 5px */
   z-index: 1000;
   border: 1px solid #e0c9a6;
 }
@@ -221,6 +222,7 @@ footer {
   text-decoration: none;
   font-weight: 400;
   transition: background 0.2s ease;
+  margin-left: 0; /* Override navbar link margin */
 }
 
 .dropdown-menu a:hover {
@@ -228,49 +230,7 @@ footer {
   color: #a66a2c;
 }
 
-/* Show dropdown on hover */
+/* Show dropdown on hover - keep visible when hovering over menu */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-.destination-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 20px;
-}
-
-.destination-content h3 {
-  font-family: 'Kalam', cursive;
-  color: #a66a2c;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.destination-content ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.destination-content ul li {
-  padding: 8px 0;
-  padding-left: 25px;
-  position: relative;
-}
-
-.destination-content ul li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: #a66a2c;
-  font-weight: bold;
-}
-
-.destination-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-
-
