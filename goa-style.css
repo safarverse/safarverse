@@ -63,10 +63,10 @@ body {
 
 .goa-packages {
   max-width: 1150px;
-  margin: 100px auto;
+  margin: 40px auto 100px;
   text-align: center;
   padding: 60px 20px;
-  border-radius: 20px;
+  
 }
 
 .goa-packages h2 {
