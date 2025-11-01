@@ -61,7 +61,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 650px;
+  max-width: 600px;
   padding: 20px;
 }
 .hero h1 {
@@ -72,8 +72,10 @@ body {
 }
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #f3efe9;
+  max-width: 550px;        /* adjust to force 2-line wrap */
+  margin: 0 auto 30px;     /* keeps paragraph in the same spot */
+  text-align: center;      /* center text */
+  line-height: 1.4;   
 }
 .btn {
   background-color: #a66a2c;
