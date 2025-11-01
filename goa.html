@@ -6,6 +6,7 @@
   <title>Goa Trip Options</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
   <style>
     /* Global Styles */
     body {
@@ -20,62 +21,59 @@
       margin: 0;
     }
 
-    /* Hero Section */
- .hero-slider {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.slides img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* or 'cover' for full bleed */
-  background-color: #000; /* fills empty space if image doesn’t fill */
-}
-.slides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.15));
-  z-index: 1;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  z-index: 2;
-  backdrop-filter: blur(4px);
-  padding: 20px 40px;
-  border-radius: 12px;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 2px;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-
-    .hero-text p {
-      font-size: 1.3rem;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    /* ✅ HERO SLIDER */
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      overflow: hidden;
     }
 
-    /* Options Section */
+    .slides {
+      display: flex;
+      height: 100%;
+      width: 300%; /* 3 images */
+      transform: translateX(0%);
+      transition: transform 1s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.15));
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+      backdrop-filter: blur(4px);
+      padding: 20px 40px;
+      border-radius: 12px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    /* ✅ OPTIONS SECTION */
     .options {
       max-width: 800px;
       margin: 100px auto 70px;
@@ -105,7 +103,7 @@
       background-color: #ff6699;
     }
 
-    /* Trip Details Section */
+    /* ✅ TRIP DETAILS SECTION */
     .trip-details {
       max-width: 900px;
       margin: 30px auto 70px;
@@ -127,104 +125,38 @@
       margin-bottom: 10px;
     }
 
-    /* Responsive Design */
+    /* ✅ RESPONSIVE */
     @media (max-width: 900px) {
       .hero-text h1 { font-size: 2rem; }
       .hero-text p { font-size: 1rem; }
       .options button { width: 80%; margin: 10px 0; }
-      .hero { height: 80vh; } /* smaller screens */
+      .hero-slider { height: 75vh; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Hero Section (Updated for Smooth Sliding + Pause) -->
-<div class="hero-slider">
-  <div class="slides">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa Beach 1">
-    <img src="images/goa1.jpg" alt="Goa Beach 2">
-    <img src="images/goa4.jpg" alt="Goa Beach 3">
+  <!-- ✅ HERO SECTION -->
+  <div class="hero-slider">
+    <div class="slides">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Goa Beach 1">
+      <img src="images/goa1.jpg" alt="Goa Beach 2">
+      <img src="images/goa4.jpg" alt="Goa Beach 3">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Unwind in Goa’s Sun, Sand & Serenity</h1>
+    </div>
   </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <h1>Unwind in Goa’s Sun, Sand & Serenity</h1>
-  </div>
-</div>
 
-<style>
-.hero-slider {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  width: 300%; /* for 3 images */
-  height: 100%;
-  transition: transform 1s ease-in-out;
-}
-
-.slides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.15));
-  z-index: 1;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  z-index: 2;
-  backdrop-filter: blur(4px);
-  padding: 20px 40px;
-  border-radius: 12px;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 2px;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-</style>
-
-<script>
-  const slides = document.querySelector('.slides');
-  const totalSlides = slides.children.length;
-  let index = 0;
-
-  function showNextSlide() {
-    index = (index + 1) % totalSlides;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  // ⏱️ Change image every 5 seconds
-  setInterval(showNextSlide, 5000);
-</script>
-
-  <!-- Options Section -->
+  <!-- ✅ OPTIONS SECTION -->
   <div class="options">
     <h2>Select Your Trip</h2>
     <button onclick="showTrip('north')">North Goa</button>
     <button onclick="showTrip('south')">South Goa</button>
   </div>
 
-  <!-- Trip Details -->
+  <!-- ✅ TRIP DETAILS -->
   <div id="north" class="trip-details">
     <h3>North Goa Day Trip</h3>
     <p><strong>Morning:</strong> Visit Fort Aguada and SinQ Beach.</p>
@@ -243,23 +175,31 @@
     <p><strong>Evening:</strong> Sunset at Palolem or Colva Beach; return to hotel.</p>
   </div>
 
+  <!-- ✅ JAVASCRIPT -->
   <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelector('.slides');
-    const totalSlides = slides.children.length;
-    let index = 0;
+    // Auto slide images with pause
+    window.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelector('.slides');
+      const totalSlides = slides.children.length;
+      let index = 0;
 
-    function showNextSlide() {
-      index = (index + 1) % totalSlides;
-      slides.style.transition = 'transform 1s ease-in-out';
-      slides.style.transform = `translateX(-${index * 100}%)`;
+      function showNextSlide() {
+        index = (index + 1) % totalSlides;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      // Change image every 5 seconds
+      setInterval(showNextSlide, 5000);
+    });
+
+    // Show trip details
+    function showTrip(trip) {
+      document.getElementById('north').style.display = 'none';
+      document.getElementById('south').style.display = 'none';
+      document.getElementById(trip).style.display = 'block';
+      document.getElementById(trip).scrollIntoView({ behavior: 'smooth' });
     }
-
-    // Change image every 5 seconds
-    setInterval(showNextSlide, 5000);
-  });
-</script>
-
+  </script>
 
 </body>
 </html>
