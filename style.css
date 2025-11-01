@@ -77,19 +77,6 @@ body {
   /*text-align: center;      /* center text */
   /*line-height: 1.4;   */
 }
-.tagline {
-  display: block !important;
-  font-size: 1.6rem !important;
-  font-family: 'Playfair Display', serif !important;
-  color: #000 !important;
-  max-width: 90% !important;     /* use % instead of 700px for better centering */
-  margin: 20px auto 40px !important;
-  text-align: center !important;
-  line-height: 1.5 !important;
-  background: none !important;
-  padding: 0 !important;
-}
-
 
 .btn {
   background-color: #a66a2c;
@@ -188,3 +175,17 @@ footer {
   font-size: 1rem;
   letter-spacing: 0.5px;
 }
+.tagline {
+  display: block !important;
+  font-size: 1.6rem !important;
+  font-family: 'Playfair Display', serif !important;
+  color: #000 !important;
+  max-width: 90% !important;     /* use % instead of 700px for better centering */
+  margin: 20px auto 40px !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+
