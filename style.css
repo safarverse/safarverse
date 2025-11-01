@@ -9,7 +9,7 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-contain;
+  justify-content: flex-start;
   align-items: center;
   padding: 5px 5px;
   background: #fff8f0;
@@ -23,11 +23,15 @@ body {
   width: auto;
   display: block;
 }
+/* Navigation styling */
+.navbar nav {
+  margin-left: 50px; /* reduce this value to move links closer to logo */
+  display: flex;
+  gap: 30px; /* space between each link */
 }
 .navbar nav a {
   text-decoration: none;
   color: #3e3b33;
-  margin-left: 25px;
   font-weight: 500;
 }
 .navbar nav a:hover {
