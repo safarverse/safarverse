@@ -17,6 +17,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  gap:25px
+  margin-left: -20px;
 }
 .logo img {
   height: 60px;
