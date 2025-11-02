@@ -1,8 +1,44 @@
 /* Custom styles for About page */
+
+/* Hero section height */
 .hero {
-  height: 800px; /* Smaller hero for about page */
+  height: 800px;
 }
 
 .hero-bg {
   height: 600px;
 }
+
+/* About Us heading - larger and centered */
+.hero-content h1 {
+  font-size: 56px;
+  text-align: center;
+}
+
+/* Center the hero content */
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Increase text sizes 
+.section-subtitle {
+  font-size: 20px;
+}
+
+.entry h3 {
+  font-size: 24px;
+}
+
+.entry p {
+  font-size: 17px;
+}
+/* Custom styles for About page 
+.hero {
+  height: 800px; /* Smaller hero for about page 
+}
+
+.hero-bg {
+  height: 600px;
+}*/
