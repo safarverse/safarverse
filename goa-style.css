@@ -236,8 +236,9 @@ body {
 /* Booking Form Modal with Background Image */
 .booking-form-modal {
   max-width: 600px;
+  max-height: 85vh;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .booking-background {
