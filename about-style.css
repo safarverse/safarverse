@@ -1,3 +1,8 @@
+.hero {
+  height: 400px !important; /* Match the background height */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .hero-bg {
   height: 600px !important;
 }
