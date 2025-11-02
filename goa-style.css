@@ -66,7 +66,6 @@ body {
   margin: 40px auto 100px;
   text-align: center;
   padding: 60px 20px;
-  
 }
 
 .goa-packages h2 {
@@ -128,44 +127,38 @@ body {
   margin-bottom: 25px;
 }
 
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: auto;
+}
+
 .book-btn {
   display: inline-block;
-  background-color: #a66a2c;
-  color: #fff;
+  flex: 1;
+  text-align: center;
   text-decoration: none;
   font-weight: 600;
   padding: 10px 25px;
   border-radius: 25px;
-  transition: background-color 0.3s ease;
-  align-self: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #a66a2c;
+  color: #fff !important;
+  border: 2px solid #a66a2c;
 }
 
 .book-btn:hover {
   background-color: #8b5523;
+  border-color: #8b5523;
 }
 
 /* ==============================
-   RESPONSIVE DESIGN
+   MODAL POPUPS
    ============================== */
 
-@media (max-width: 900px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .hero-slider {
-    height: 75vh;
-  }
-  .package-card {
-    width: 90%;
-  }
-  .goa-packages {
-    margin: 60px 10px;
-    padding: 40px 10px;
-  }
-  .goa-packages h2 {
-    font-size: 2rem;
-  }
-}
 /* Modal Popup */
 .modal {
   display: none;
@@ -186,7 +179,7 @@ body {
   border-radius: 15px;
   width: 90%;
   max-width: 700px;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
   box-shadow: 0 10px 40px rgba(0,0,0,0.3);
   position: relative;
@@ -201,6 +194,8 @@ body {
   line-height: 20px;
   cursor: pointer;
   transition: color 0.3s;
+  position: relative;
+  z-index: 10;
 }
 
 .close:hover {
@@ -237,8 +232,8 @@ body {
 .booking-form-modal {
   max-width: 600px;
   max-height: 85vh;
+  overflow-y: auto !important;
   position: relative;
-  overflow-y: auto;
 }
 
 .booking-background {
@@ -252,6 +247,7 @@ body {
   filter: blur(8px);
   opacity: 0.3;
   z-index: 0;
+  pointer-events: none;
 }
 
 .booking-form-modal h2,
@@ -329,31 +325,43 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .submit-btn:hover {
   background-color: #8b5523;
 }
 
-/* Button Group */
-.button-group {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: auto;
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-slider {
+    height: 75vh;
+  }
+  .package-card {
+    width: 90%;
+  }
+  .goa-packages {
+    margin: 60px 10px;
+    padding: 40px 10px;
+  }
+  .goa-packages h2 {
+    font-size: 2rem;
+  }
 }
 
-.button-group .book-btn {
-  flex: 1;
-  text-align: center;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .modal-content {
     width: 95%;
     margin: 10% auto;
     padding: 20px;
+    max-height: 90vh;
   }
   
   .form-row {
@@ -363,6 +371,6 @@ body {
   .booking-form-modal {
     width: 95%;
     padding: 20px;
+    max-height: 90vh;
   }
 }
-
