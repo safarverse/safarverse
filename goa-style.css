@@ -66,6 +66,7 @@ body {
   margin: 40px auto 100px;
   text-align: center;
   padding: 60px 20px;
+  
 }
 
 .goa-packages h2 {
@@ -127,198 +128,19 @@ body {
   margin-bottom: 25px;
 }
 
-/* Button Group */
-.button-group {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: auto;
-}
-
 .book-btn {
   display: inline-block;
-  flex: 1;
-  text-align: center;
+  background-color: #a66a2c;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   padding: 10px 25px;
   border-radius: 25px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background-color: #a66a2c;
-  color: #fff !important;
-  border: 2px solid #a66a2c;
+  transition: background-color 0.3s ease;
+  align-self: center;
 }
 
 .book-btn:hover {
-  background-color: #8b5523;
-  border-color: #8b5523;
-}
-
-/* Modal Popup */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 99999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 30px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 700px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-  position: relative;
-  z-index: 100000;
-}
-
-.close {
-  color: #999;
-  float: right;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 20px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.close:hover {
-  color: #a66a2c;
-}
-
-#itineraryDetails h2 {
-  color: #a66a2c;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 20px;
-  margin-top: 0;
-}
-
-#itineraryDetails h4 {
-  color: #8b5523;
-  font-family: 'Kalam', cursive;
-  margin-top: 25px;
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-}
-
-#itineraryDetails p {
-  line-height: 1.7;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-#itineraryDetails strong {
-  color: #333;
-}
-
-/* Booking Form Modal with Background Image */
-.booking-form-modal {
-  max-width: 600px;
-  position: relative;
-  overflow: hidden;
-}
-
-.booking-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: blur(8px);
-  opacity: 0.3;
-  z-index: 0;
-}
-
-.booking-form-modal h2,
-.booking-form-modal form {
-  position: relative;
-  z-index: 1;
-}
-
-.booking-form-modal h2 {
-  color: #a66a2c;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 25px;
-  margin-top: 0;
-  text-shadow: 0 1px 3px rgba(255,255,255,0.8);
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  color: #333;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  transition: border-color 0.3s;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #a66a2c;
-  box-shadow: 0 0 0 3px rgba(166, 106, 44, 0.1);
-  background-color: #fff;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.form-row .form-group {
-  margin-bottom: 0;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.submit-btn {
-  width: 100%;
-  background-color: #a66a2c;
-  color: #fff;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-family: 'Poppins', sans-serif;
-}
-
-.submit-btn:hover {
   background-color: #8b5523;
 }
 
@@ -342,22 +164,5 @@ body {
   }
   .goa-packages h2 {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    margin: 10% auto;
-    padding: 20px;
-  }
-  
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .booking-form-modal {
-    width: 95%;
-    padding: 20px;
   }
 }
