@@ -1,0 +1,8 @@
+/* Custom styles for About page */
+.hero {
+  height: 400px; /* Smaller hero for about page */
+}
+
+.hero-bg {
+  height: 400px;
+}
