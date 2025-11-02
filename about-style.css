@@ -2,6 +2,42 @@
 
 /* Hero section height */
 .hero {
+  height: 400px !important;
+}
+
+.hero-bg {
+  height: 400px !important;
+}
+
+/* About Us heading - larger and centered */
+.hero-content h1 {
+  font-size: 56px !important;
+  text-align: center !important;
+}
+
+/* Center the hero content */
+.hero-content {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Increase text sizes */
+.section-subtitle {
+  font-size: 20px !important;
+}
+
+.entry h3 {
+  font-size: 24px !important;
+}
+
+.entry p {
+  font-size: 17px !important;
+}
+/* Custom styles for About page */
+
+/* Hero section height */
+.hero {
   height: 800px;
 }
 
