@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us Safarverse</title>
-  <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Safarverse</title>
+  <!-- Meta Description for Google Search -->
+  <meta name="description" content="Learn about Safarverse - your universe of travel. We curate group trips tailored for every age group.">
+  
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="About Us - Safarverse">
+  <meta property="og:description" content="Discover the story behind Safarverse and our mission to create unforgettable travel experiences.">
+  <meta property="og:image" content="https://safarverse.com/images/Safarverse.png">
+  <meta property="og:url" content="https://safarverse.com/about.html">
+  <link rel="stylesheet" href="style.css" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-  <nav class="navbar">
-    <div class="logo">Safarverse</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="packages.html">Packages</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/Safarverse.png" alt="Safarverse Logo">
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-link">Destinations</a>
+        <div class="dropdown-menu">
+          <a href="himalayas.html">Himalayas</a>
+          <a href="goa.html">Goa</a>
+          <a href="kerala.html">Kerala</a>
+          <a href="rajasthan.html">Rajasthan</a>
+          <a href="northeast.html">Northeast India</a>
+        </div>
+      </div>
+      <a href="about.html">About us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
-  <section class="about-hero">
-    <h1>About Safarverse</h1>
-  </section>
-
-  <!-- About Content -->
-  <section class="about-content">
-    <p>We created this <strong>universe of travellers</strong> — Safarverse — to bring people together for <strong>life-changing adventures</strong>. Our trips are full of jaw-dropping adventures, hidden gems you’ve never imagined, and moments you’ll never forget. That’s exactly what Safarverse is all about — creating <strong>memories, friendships, and adventures that last a lifetime</strong>.</p>
-
-    <div class="principles">
-      <h2>The Safarverse Way</h2>
-      <ul>
-        <li><strong>Experiences that stay with you forever</strong> — trips you’ll never call ordinary.</li>
-        <li><strong>Adventure for every age</strong> — curated group trips so you travel with your tribe, from young explorers to golden-age adventurers.</li>
-        <li><strong>Pocket-friendly journeys</strong> — unforgettable adventures that don’t break the bank.</li>
-      </ul>
+  <section class="hero">
+    <img src="images/Newhomepage.jpg" alt="Forest adventure" class="hero-bg">
+    <div class="hero-content">
+      <h1>Our Story, Your Adventure</h1>
+      <a href="contact.html" class="btn">Join Our Journey</a>
     </div>
-
-    <p>At Safarverse, we believe that travel has no age limit and everyone deserves a chance to explore. Whether it’s your first group trip or your tenth, we make sure every journey is **fun, hassle-free, and unforgettable**.</p>
   </section>
 
-  <!-- Founder Section -->
-  <section class="founder-section">
-    <img src="images/founder.jpg" alt="[Your Name]">
-    <h3>[Your Name]</h3>
-    <p>Founder & Chief Explorer</p>
+  <!-- About Content Section -->
+  <section class="journal">
+    <h2>About Safarverse</h2>
+    <p class="section-subtitle">Welcome to Safarverse – where every journey becomes a story, and every traveller finds their tribe.</p>
+    
+    <div class="entries">
+      <div class="entry">
+        <h3>Our Mission</h3>
+        <p>We believe travel is more than visiting new places – it's about connecting with like-minded souls, creating lasting memories, and discovering yourself along the way. Safarverse curates group trips designed specifically for different age groups, ensuring you explore the world with your travel tribe.</p>
+      </div>
+      <div class="entry">
+        <h3>Our Vision</h3>
+        <p>To create a universe where travel is accessible, enjoyable, and meaningful for everyone – whether you're a young explorer seeking adventure, a seasoned traveller craving new experiences, or a golden ager embracing the joy of discovery.</p>
+      </div>
+      <div class="entry">
+        <h3>What We Offer</h3>
+        <p>From the majestic Himalayas to the serene beaches of Goa, from the backwaters of Kerala to the royal heritage of Rajasthan – we craft all-inclusive, budget-friendly trips that let you travel carefree. We handle the details so you can focus on making memories.</p>
+      </div>
+    </div>
   </section>
+
+  <!-- Quote Section -->
+  <section class="quote">
+    <blockquote>
+      "Jobs fill your pocket, but adventures fill your soul."  
+      <span>– Safarverse</span>
+    </blockquote>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>©2025 Copyright by Safarverse</p>
+  </footer>
 
 </body>
 </html>
