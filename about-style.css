@@ -24,3 +24,13 @@
   font-size: 1.3rem;
   top: 0;
 }
+/* Closing paragraph after bullets */
+.journal .closing-text {
+  font-size: 1.1rem;
+  color: #3e3b33;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
