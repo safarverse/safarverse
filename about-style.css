@@ -1,5 +1,5 @@
 .hero {
-  height: 400px !important; /* Match the background height */
+  height: auto !important; /* Changes to auto instead of fixed 400px */
   margin-bottom: 0;
   padding-bottom: 0;
 }
