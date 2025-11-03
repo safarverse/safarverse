@@ -1,37 +1,26 @@
-.hero {
-  height: auto !important; /* Changes to auto instead of fixed 400px */
-  margin-bottom: 0;
-  padding-bottom: 0;
-  min-height: 500px; /* Optional: sets a minimum height */
-}
-}
-.hero-bg {
-  height: 900px !important;
-}
-.hero h1 {
-  font-family: 'Kalam', cursive;
-  font-size: 6rem;
-  margin-bottom: 0
-  text-align: center;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+/* Custom bullet list styling */
+.journal .custom-bullets {
+  list-style: none;
+  padding-left: 0;
+  max-width: 900px;
+  margin: 30px auto;
+  text-align: left;
 }
 
-..about-text {
-  width: 100%; /* Full width background */
-  background:#faf7f2; /* Full background color */
-  padding: 60px 200px !important; /* Spacing from edges */
-  text-align: center;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.about-text p {
+.journal .custom-bullets li {
   font-size: 1.1rem;
   color: #3e3b33;
   margin-bottom: 20px;
-  line-height: 1.8; 
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;/* Better readability */
+  line-height: 1.8;
+  padding-left: 40px;
+  position: relative;
 }
 
+/* Custom bullet icon */
+.journal .custom-bullets li::before {
+  content: "🗺️"; /* Change to: ✈️ 🧭 ⛰️ 🎒 or any emoji */
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  top: 0;
+}
