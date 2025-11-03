@@ -1,13 +1,3 @@
-.hero-bg {
-  position: absolute;
-  height: 600px;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom; /* Shows bottom of image, crops from top */
-  opacity:0.7;
-  
 .journal {
   text-align: center;
   padding: 30px 20px 80px;  /* spacing inside this section */
