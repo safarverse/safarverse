@@ -6,6 +6,9 @@
   overflow: hidden; /* Hides the cropped portion */
   position: relative;
 }
+.journal h2 {
+  margin-bottom:0px;
+}
 /* Hero background image - crops from TOP */
 .hero-bg {
   position: absolute;
