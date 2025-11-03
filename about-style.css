@@ -6,6 +6,7 @@
   height: 100%;
   object-fit: cover;
   object-position: bottom; /* Shows bottom of image, crops from top */
+  opacity:0.7;
   
 .journal {
   text-align: center;
