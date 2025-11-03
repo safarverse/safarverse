@@ -15,7 +15,7 @@
   line-height: 1.8;
   color: #444;
   text-align: center; /* Changed from left to center */
-  max-width: 500px; /* Increased from 200px to make text wider */
+  max-width: 700px; /* Increased from 200px to make text wider */
   margin: 0 auto 30px auto; /* Centers the text block horizontally */
 }
 /* Hero background image - crops from TOP */
