@@ -1,3 +1,15 @@
+.journal {
+  text-align: center;
+  padding: 30px 20px 80px;  /* spacing inside this section */
+  background: #fff8f0;
+}
+.section-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #6b4b2a;
+  margin-top: 0px;
+  letter-spacing: 0.5px;
+}
 /* Custom bullet list styling */
 .journal .custom-bullets {
   list-style: none;
@@ -9,7 +21,7 @@
 
 .journal .custom-bullets li {
   font-size: 1.1rem;
-  color: #3e3b33;
+  color: #6b4b2a;
   margin-bottom: 20px;
   line-height: 1.8;
   padding-left: 40px;
