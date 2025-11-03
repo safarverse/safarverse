@@ -6,13 +6,6 @@
   overflow: hidden; /* Hides the cropped portion */
   position: relative;
 }
-.section-subtitle {
-  font-family: 'Kalam', cursive/*!important*/;
-  font-size: 2.5rem ;/*!important*/
-  color: #a66a2c;/*!important*/
-  margin-top: -5px ;/*!important*/
-  margin-bottom: 40px ;/*!important*/
-}
 /* Hero background image - crops from TOP */
 .hero-bg {
   position: absolute;
