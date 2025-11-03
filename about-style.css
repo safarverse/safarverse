@@ -1,3 +1,10 @@
+.hero-bg {
+  position: absolute;
+  width: auto !important; /* Override width: 100% */
+  height: auto !important; /* Override height: 100% */
+  min-width: 100%; /* Ensure full width coverage */
+  object-fit: none !important; /* Override object-fit: cover */
+  bottom: 0; /* Align to bottom, crops from top */
 .journal {
   text-align: center;
   padding: 30px 20px 80px;  /* spacing inside this section */
