@@ -13,9 +13,8 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #444;
-  text-align: center;
-  max-width: 400px;
-  margin: 0 auto 30px auto;
+  text-align: left;
+  max-width: 200px;
 }
 /* Hero background image - crops from TOP */
 .hero-bg {
