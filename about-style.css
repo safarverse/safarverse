@@ -13,7 +13,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 20% bottom; /* Shows BOTTOM, crops from TOP */
+  object-position: 40% bottom; /* Shows BOTTOM, crops from TOP */
 }
 
 .journal {
