@@ -18,7 +18,7 @@
 
 ..about-text {
   width: 100%; /* Full width background */
-  background: #fff8f0; /* Full background color */
+  background:#faf7f2; /* Full background color */
   padding: 60px 200px !important; /* Spacing from edges */
   text-align: center;
   box-sizing: border-box;
@@ -30,7 +30,7 @@
   color: #3e3b33;
   margin-bottom: 20px;
   line-height: 1.8; 
-  max-width: 1200px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;/* Better readability */
 }
