@@ -9,12 +9,14 @@
 .journal h2 {
   margin-top:-10px;
   margin-bottom:0px;
+}
 .journal .intro-text {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #444;
-  text-align: left;
-  max-width: 200px;
+  text-align: center; /* Changed from left to center */
+  max-width: 500px; /* Increased from 200px to make text wider */
+  margin: 0 auto 30px auto; /* Centers the text block horizontally */
 }
 /* Hero background image - crops from TOP */
 .hero-bg {
