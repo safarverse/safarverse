@@ -14,7 +14,15 @@
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
-.section-subtitle {
-  margin-left: 100px; /* Increase left margin */
-  margin-right: 100px; /* Increase right margin */
+.about-text {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 150px; /* Increase left/right padding */
+  text-align: center;
+  background: #fff8f0;
+}
+.about-text p {
+  font-size: 1.1rem;
+  color: #3e3b33;
+  margin-bottom: 20px;
 }
