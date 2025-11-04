@@ -54,11 +54,11 @@
   align-items: center;
 }
 
-.card:hover {
+/*.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-color: rgba(33, 128, 141, 0.3);
-}
+}*/
 
 /* Card Logo/Icon */
 .card-logo {
@@ -74,7 +74,7 @@
 }
 
 .card-content h3 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   color: #A8754B;
   font-style: italic;
