@@ -39,7 +39,7 @@
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px 20px 40px 20px; /* top right bottom left */
+  padding: 5px 20px 40px 20px; /* top right bottom left */
   background: transparent; /* No background - inherits page color */
 }
 /* Card styling */
