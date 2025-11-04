@@ -41,6 +41,9 @@
   margin: 0 auto;
   padding: 0px 20px 40px 20px; /* top right bottom left */
   background: transparent; /* No background - inherits page color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Side-by-side layout */
+  align-items: center; /* VERTICALLY centers logo */
 }
 /* Card styling */
 .card {
