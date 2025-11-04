@@ -79,10 +79,11 @@
   font-weight: 600;
   color: #A8754B;
   font-style: italic;
-  margin-bottom: 0px; 
+  margin-bottom: 0; 
 }
 
 .card-content p {
   font-size: 15px;
   color: #626C71);
+  margin-top: 0; 
 }
