@@ -33,8 +33,31 @@
   padding: 30px 20px 80px;  /* spacing inside this section */
   background: #fff8f0;
 }
-
-/* Custom bullet list styling */
+/* Container - NO background, just transparent */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: transparent; /* No background - inherits page color */
+}
+/* Card styling */
+.card {
+  background: #fff; /* Only the cards have background */
+  border: 2px solid #e0d8c8;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3e3b33;
+}
+/* Custom bullet list styling 
 .journal .custom-bullets {
   list-style: none;
   padding-left: 0;
@@ -52,15 +75,15 @@
   position: relative;
 }
 
-/* Custom bullet icon */
+ Custom bullet icon 
 .journal .custom-bullets li::before {
-  content: "🗺️"; /* Change to: ✈️ 🧭 ⛰️ 🎒 or any emoji */
+  content: "🗺️"; /* Change to: ✈️ 🧭 ⛰️ 🎒 or any emoji 
   position: absolute;
   left: 0;
   font-size: 1.3rem;
   top: 0;
-}
-/* Closing paragraph after bullets */
+}*/
+/* Closing paragraph after bullets 
 .journal .closing-text {
   font-size: 1.1rem;
   color: #3e3b33;
@@ -68,5 +91,5 @@
   max-width: 900px;
   margin: 30px auto 0 auto;
   text-align: center;
-}
+}*/
 
