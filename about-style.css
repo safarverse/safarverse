@@ -54,6 +54,18 @@
   line-height: 1.6;
   color: #3e3b33;
 }
+.card-logo {
+  width: 60px; /* Adjust size as needed */
+  height: 60px;
+  flex-shrink: 0; /* Prevents logo from shrinking */
+  object-fit: contain; /* Keeps logo proportions */
+}
+.card h3 {
+  font-family: 'Kalam', cursive;
+  font-size: 1.8rem;
+  color: #a66a2c;
+  margin-bottom: 15px;
+}
 /* Custom bullet list styling 
 .journal .custom-bullets {
   list-style: none;
