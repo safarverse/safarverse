@@ -13,7 +13,7 @@
   height: 100%;
   object-fit: cover;
   object-position: right bottom; /* Shows BOTTOM, crops from TOP */
-  opacity: 0.7;
+  /*opacity: 0.7;*/
 }
 .journal h2 {
   margin-top:-10px;
@@ -36,31 +36,25 @@
 .cards-container {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 30px;
+  gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0px 20px 40px 20px;
   background: transparent;
-  width: 100%;
 }
 
 .card {
   background: #fffdf7;
-  border: 2px solid #e0d8c8;
+  border: 1px solid #e0d8c8;
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 100%;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
 
 .card-logo {
   width: 60px;
