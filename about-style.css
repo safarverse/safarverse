@@ -68,6 +68,9 @@
   color: #a66a2c;
   margin-bottom: 15px;
 }
+.card-content {
+  flex: 1;
+}
 /* Custom bullet list styling 
 .journal .custom-bullets {
   list-style: none;
