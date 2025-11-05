@@ -87,8 +87,9 @@
 /* Story Section Wrapper */
 .story {
   text-align: center;
-  margin-top: 0;
+  margin-top: -20px;
   padding: 0 10%;
+  background: transparent;
 }
 /* Heading inside story section */
 .story h2 {
@@ -104,6 +105,7 @@
   gap: 50px;
   align-items: flex-start;
   justify-content: center;
+  background: transparent;
 }
 /* Story Image - Make it smaller */
 .story-image {
@@ -120,6 +122,7 @@
 .story-text {
   flex: 2 1 500px;
   min-width: 300px;
+  background: transparent;
 }
 .story-text p {
   font-size: 1.05rem;
