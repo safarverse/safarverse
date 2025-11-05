@@ -13,7 +13,7 @@
   height: 100%;
   object-fit: cover;
   object-position: right bottom; /* Shows BOTTOM, crops from TOP */
-  opacity: 1;
+  opacity: 0.7;
 }
 .who {
   text-align: center;
@@ -85,12 +85,20 @@
   margin-top: 0; 
 }
 /* Story Section Wrapper */
-/* Heading inside story section */
-.story h2 {
-  font-family: 'Kalam', cursive;
-  font-size: 2.5rem;
-  color: #a66a2c;
-  margin-bottom:20px;
+.story {
+  text-align: center;
+  margin-top: -20px;
+  padding: 0 10%;
+  background: transparent !important;
+}
+.story-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  background: transparent !important;
+}
 /* Heading inside story section */
 .story h2 {
   font-family: 'Kalam', cursive;
