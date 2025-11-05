@@ -81,12 +81,11 @@
 }
 .card-content p {
   font-size: 15px;
-  color: #626C71);
+  color: #626C71;
   margin-top: 0; 
 }
 /* Story Section Wrapper */
 .story {
-  background: #fff8f0;
   text-align: center;
   margin-top: 0;
 }
