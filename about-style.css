@@ -86,17 +86,32 @@
   color: #626C71);
   margin-top: 0; 
 }
-/* Story Container - Creates side-by-side layout */
+/* Story Section Wrapper */
+.story-section {
+  padding: 80px 20px 60px;  /* Top, sides, bottom padding */
+  background: #f9f7f3;       /* Optional: different background */
+}
+
+/* Heading inside story section */
+.story-section h2 {
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  color: #a66a2c;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Story Container */
 .story-container {
   max-width: 1200px;
-  margin: 60px auto;
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
   gap: 40px;
   align-items: center;
 }
 
-/* Story Image - Left/Right Side */
 .story-image {
   flex: 1;
   max-width: 500px;
@@ -107,21 +122,10 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
 }
 
-/* Story Text - Left/Right Side */
 .story-text {
   flex: 1;
-  padding-left: 20px;
-}
-
-.story-text h2 {
-  font-family: 'Kalam', cursive;
-  font-size: 2rem;
-  color: #a66a2c;
-  margin-bottom: 20px;
-  margin-top: 0;
 }
 
 .story-text p {
