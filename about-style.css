@@ -88,6 +88,7 @@
 .story {
   text-align: center;
   margin-top: 0;
+  padding: 0 10%;
 }
 /* Heading inside story section */
 .story h2 {
