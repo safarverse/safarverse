@@ -13,7 +13,7 @@
   height: 100%;
   object-fit: cover;
   object-position: right bottom; /* Shows BOTTOM, crops from TOP */
-  opacity: 0.7;
+  opacity: 1;
 }
 .who {
   text-align: center;
@@ -87,10 +87,10 @@
 /* Story Section Wrapper */
 .story {
   text-align: center;
-  margin-top: 80px;
-  padding: 0 10%;
-  background: transparent !important;
+  margin-top: 0;
+  padding: 80px 10% 0 10%;  /* ✅ Top padding instead of margin */
 }
+
 .story-container {
   display: flex;
   flex-wrap: wrap;
