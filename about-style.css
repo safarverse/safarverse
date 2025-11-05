@@ -13,7 +13,7 @@
   height: 100%;
   object-fit: cover;
   object-position: right bottom; /* Shows BOTTOM, crops from TOP */
-  opacity: 1;
+  opacity: 0.7;
 }
 .who {
   text-align: center;
@@ -87,7 +87,7 @@
 /* Story Section Wrapper */
 .story {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
   padding: 0 10%;
   background: transparent !important;
 }
