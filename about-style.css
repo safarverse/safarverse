@@ -88,19 +88,14 @@
 }
 /* Story Section Wrapper */
 .story-section {
-  padding: 80px 20px 60px;  /* Top, sides, bottom padding */
-  background: #f9f7f3;       /* Optional: different background */
+  text-align: center;
+  padding: 30px 20px 80px;  /* spacing inside this section */
+  background: #fff8f0;
 }
-
 /* Heading inside story section */
 .story-section h2 {
-  text-align: center;
-  font-family: 'Kalam', cursive;
-  font-size: 2.5rem;
-  color: #a66a2c;
-  margin-top: 0;
-  margin-bottom: 40px;
-}
+  margin-top:-10px;
+  margin-bottom:0px;
 
 /* Story Container */
 .story-container {
