@@ -13,7 +13,7 @@
   height: 100%;
   object-fit: cover;
   object-position: right bottom; /* Shows BOTTOM, crops from TOP */
-  /*opacity: 0.7;*/
+  opacity: 0.7;
 }
 .journal h2 {
   margin-top:-10px;
@@ -94,7 +94,7 @@
 }
 /* Heading inside story section */
 .story-section h2 {
-  margin-top:-10px;
+  margin-top:-30px;
   margin-bottom:0px;
 
 /* Story Container */
