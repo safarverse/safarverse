@@ -88,16 +88,18 @@
 .story {
   text-align: center;
   margin-top: 0;
-  padding: 80px 10% 0 10%;  /* ✅ Top padding instead of margin */
+  padding: 40px 10% 0 10%;  /* ✅ Top padding instead of margin */
 }
-
-.story-container {
+.story-row {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  background: transparent !important;
+  margin-bottom: 60px;
+}
+.story-row-reverse {
+  flex-direction: row-reverse;  /* Only adds the reverse */
 }
 /* Heading inside story section */
 .story h2 {
