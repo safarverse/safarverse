@@ -34,7 +34,7 @@
 }
 /* Cards Container - 2x2 Grid Layout */
 .cards-container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 60px auto;
   padding: 0 20px;
   display: grid;
@@ -44,7 +44,7 @@
 
 /* Individual Card Styling */
 .card {
-  background: #FAF8F5;
+  background: #FCFCF9;
   padding: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
