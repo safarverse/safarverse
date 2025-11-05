@@ -170,16 +170,6 @@ body {
   font-size: 1.2rem;
   color: #8b5523;
 }
-
-/* Footer */
-footer {
-  background: #3e3b33;
-  color: #f9f7f3;
-  text-align: center;
-  padding: 25px;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-}
 /* Dropdown Container */
 .dropdown {
   position: relative;
@@ -234,3 +224,28 @@ footer {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+/* Footer 
+footer {
+  background: #3e3b33;
+  color: #f9f7f3;
+  text-align: center;
+  padding: 25px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}*//* Common styles for all pages */
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #3a3a3a;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+}
+
+
