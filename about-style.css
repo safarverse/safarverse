@@ -86,3 +86,11 @@
   color: #626C71);
   margin-top: 0; 
 }
+footer {
+  background: #3e3b33;
+  color: #f9f7f3;
+  text-align: center;
+  padding: 25px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
