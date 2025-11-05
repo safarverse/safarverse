@@ -15,22 +15,25 @@
   object-position: right bottom; /* Shows BOTTOM, crops from TOP */
   opacity: 0.7;
 }
-.journal h2 {
+.who {
+  text-align: center;
+  padding: 30px 20px 80px;  /* spacing inside this section */
+  background: #fff8f0;
+}
+.who h2 {
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  color: #a66a2c;
   margin-top:-10px;
   margin-bottom:0px;
 }
-.journal .intro-text {
+.who .intro-text {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #444;
   text-align: center; /* Changed from left to center */
   max-width: 1000px; /* Increased from 200px to make text wider */
   margin: 0 auto 30px auto; /* Centers the text block horizontally */
-}
-.journal {
-  text-align: center;
-  padding: 30px 20px 80px;  /* spacing inside this section */
-  background: #fff8f0;
 }
 /* Cards Container - 2x2 Grid Layout */
 .cards-container {
@@ -41,7 +44,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
-
 /* Individual Card Styling */
 .card {
   background: #fdfcf8;
@@ -53,13 +55,11 @@
   align-items: center;  /* This centers content vertically! ✅ */
   gap: 5px;
 }
-
 /*.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-color: rgba(33, 128, 141, 0.3);
 }*/
-
 /* Card Logo/Icon */
 .card-logo {
   width: 80px;
@@ -67,12 +67,10 @@
   object-fit: contain;
   margin-bottom: 0;
 }
-
 /* Card Content */
 .card-content {
   text-align: left;
 }
-
 .card-content h3 {
   font-size: 16px;
   font-weight: 600;
@@ -80,14 +78,18 @@
   font-style: italic;
   margin-bottom: 0; 
 }
-
 .card-content p {
   font-size: 15px;
   color: #626C71);
   margin-top: 0; 
 }
+/* Story Section Wrapper */
+.story {
+  padding: 80px 10%;
+  background: #fff8f0;
+}
 /* Heading inside story section */
-.story-section h2 {
+.story h2 {
   font-family: 'Kalam', cursive;
   font-size: 2.5rem;
   color: #a66a2c;
@@ -123,8 +125,4 @@
   color: #444;
   margin-bottom: 20px;
 }
-/* Story Section Wrapper */
-.story-section {
-  padding: 80px 10%;
-  background: #fff8f0;
-}
+
