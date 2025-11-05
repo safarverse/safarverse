@@ -107,9 +107,10 @@
   align-items: center;
 }
 
+/* Story Image - Make it smaller */
 .story-image {
-  flex: 1;
-  max-width: 500px;
+  flex: 0 0 300px;  /* Fixed width of 300px */
+  max-width: 300px;
 }
 
 .story-image img {
@@ -117,11 +118,14 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
+/* Story Text - Takes remaining space */
 .story-text {
   flex: 1;
 }
+
 
 .story-text p {
   font-size: 1rem;
