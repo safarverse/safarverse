@@ -1,10 +1,11 @@
 .hero-content h1{
   font-family: 'Kalam', cursive;
   color: #a66a2c;
+  font-size: 5rem;
 }
 .hero-content p{
   font-family: 'Kalam', cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #a66a2c;
   margin-bottom: 40px;
 }
