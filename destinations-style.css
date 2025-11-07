@@ -1,22 +1,12 @@
-.coming-soon {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
+.hero-content h1{
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  color: #a66a2c;
+  margin-bottom: 40px;
 }
-
-.coming-soon .content h1 {
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 10px;
+.hero-content p{
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  color: #a66a2c;
+  margin-bottom: 40px;
 }
-
-.coming-soon .content p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
