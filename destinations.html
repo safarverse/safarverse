@@ -66,5 +66,21 @@
   <footer>
     <p>&copy; 2025 Safarverse. All rights reserved.</p>
   </footer>
+<script>
+  const slides = document.querySelector('.slides');
+  const slideImages = document.querySelectorAll('.slides img');
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex++;
+    if (currentIndex >= slideImages.length) {
+      currentIndex = 0;
+    }
+    slides.style.transform = `translateX(-${currentIndex * 100}vw)`;
+  }
+
+  setInterval(nextSlide, 3000); // change slide every 3 seconds
+</script>
+
 </body>
 </html>
