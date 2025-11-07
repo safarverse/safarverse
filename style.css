@@ -149,27 +149,6 @@ body {
 .read-btn:hover {
   text-decoration: underline;
 }
-
-/* Quote Section */
-.quote {
-  background: #f3ece4;
-  padding: 80px 20px;
-  text-align: center;
-  font-family: 'Kalam', cursive;
-  color: #6b4b2a;
-}
-.quote blockquote {
-  font-size: 1.8rem;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.quote span {
-  display: block;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #8b5523;
-}
 /* Dropdown Container */
 .dropdown {
   position: relative;
